@@ -538,421 +538,518 @@ kebun: {
 }
     };
 
-// ========== DATA SOAL (30 SOAL LENGKAP) ==========
+// ========== DATA SOAL (30 SOAL) ==========
 const soalList = [
     // ======================================================
-    // SOAL 1-3 : CERITA BAZAR
+    // TEKS 1: KELINCI YANG SOMBONG (Soal 1-2)
     // ======================================================
     {
         nomor: 1,
         tipe: "cerita",
-        cerita: "bazar",
-        gambar: "sl1.png",
-        pertanyaan: "Total kue yang digunakan dalam bazar tersebut adalah…",
-        options: ["A. 6 kue", "B. 7 kue", "C. 8 kue", "D. 9 kue"],
-        correct: "D. 9 kue",
-        pembahasan: `<strong>Pembahasan:</strong><br>• Paket A: 8 × ½ = 4 kue<br>• Paket B: 4 × ¾ = 3 kue<br>• Paket C: 2 × 1 = 2 kue<br><strong>Total = 4 + 3 + 2 = 9 kue</strong>`
+        cerita: "fiksi1",
+        gambar: "kelinci.png",
+        pertanyaan: "Mengapa kelinci menantang kura-kura untuk balapan?",
+        options: [
+            "A. Kelinci ingin berteman dengan kura-kura",
+            "B. Kelinci merasa dirinya paling cepat",
+            "C. Kura-kura yang menantang lebih dulu",
+            "D. Kelinci ingin melatih kura-kura berlari"
+        ],
+        correct: "B. Kelinci merasa dirinya paling cepat",
+        pembahasan: `Kelinci menantang kura-kura karena ia sombong dan merasa dirinya hewan tercepat. Ini terlihat dari ucapannya: "Akulah hewan tercepat di padang ini."`
     },
     {
         nomor: 2,
-        tipe: "cerita",
-        cerita: "bazar",
-        gambar: "sl1.png",
-        pertanyaan: "Jika setiap 1 roti dijual Rp2.000, maka total uang yang diperoleh dari penjualan semua roti adalah…",
-        options: ["A. Rp52.000", "B. Rp44.000", "C. Rp48.000", "D. Rp56.000"],
-        correct: "D. Rp56.000",
-        pembahasan: `<strong>Pembahasan:</strong><br>• Paket A: 8 × 2 = 16 roti<br>• Paket B: 4 × 1 = 4 roti<br>• Paket C: 2 × 4 = 8 roti<br><strong>Total roti = 28 roti</strong><br>• Uang = 28 × Rp2.000 = Rp56.000`
+        tipe: "kompleks",
+        cerita: "fiksi1",
+        gambar: "kelinci.png",
+        pertanyaan: "Pernyataan yang SESUAI dengan isi cerita adalah… (Pilih lebih dari satu jawaban)",
+        options: [
+            "A. Kelinci menang dalam perlombaan",
+            "B. Kura-kura tidak pernah berhenti berusaha",
+            "C. Kelinci tidur karena merasa sudah pasti menang",
+            "D. Kura-kura berlari lebih cepat dari kelinci"
+        ],
+        correct: ["B. Kura-kura tidak pernah berhenti berusaha", "C. Kelinci tidur karena merasa sudah pasti menang"],
+        pembahasan: `✗ A: Kelinci kalah, bukan menang. ✓ B: Kura-kura terus berjalan tanpa berhenti. ✓ C: Kelinci tidur di bawah pohon karena terlalu percaya diri. ✗ D: Kura-kura lambat, tidak lebih cepat dari kelinci.`
     },
+
+    // ======================================================
+    // TEKS 2: TUMBUHAN PEMAKAN SERANGGA (Soal 3-4)
+    // ======================================================
     {
         nomor: 3,
         tipe: "cerita",
-        cerita: "bazar",
-        gambar: "sl1.png",
-        pertanyaan: "Berapa selisih jumlah roti antara Paket A dan Paket C yang dibuat panitia?",
-        options: ["A. 4 roti", "B. 6 roti", "C. 8 roti", "D. 10 roti"],
-        correct: "C. 8 roti",
-        pembahasan: `<strong>Pembahasan:</strong><br>• Roti Paket A: 8 × 2 = 16 roti<br>• Roti Paket C: 2 × 4 = 8 roti<br><strong>Selisih = 16 - 8 = 8 roti</strong>`
+        cerita: "informasi1",
+        gambar: "kantong_semar.png",
+        pertanyaan: "Mengapa tumbuhan insektivora memakan serangga?",
+        options: [
+            "A. Karena mereka tidak bisa berfotosintesis",
+            "B. Karena tanah tempat hidupnya miskin unsur hara",
+            "C. Karena serangga mengganggu pertumbuhan mereka",
+            "D. Karena mereka tidak memiliki daun hijau"
+        ],
+        correct: "B. Karena tanah tempat hidupnya miskin unsur hara",
+        pembahasan: `Teks menjelaskan: "Mereka hidup di tanah yang kurang unsur hara. Tanahnya miskin nitrogen dan mineral lain." Tumbuhan ini TETAP melakukan fotosintesis.`
     },
-
-    // ======================================================
-    // SOAL 4 : TABUNG
-    // ======================================================
     {
         nomor: 4,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "tabung1.png",
-        pertanyaan: "Perhatikan gambar tabung di atas! Sebuah tabung memiliki jari-jari alas 7 cm dan tinggi 10 cm. Volume tabung tersebut adalah… (π = 22/7)",
-        options: ["A. 1.440 cm³", "B. 1.540 cm³", "C. 1.640 cm³", "D. 1.740 cm³"],
-        correct: "B. 1.540 cm³",
-        pembahasan: `<strong>Pembahasan:</strong><br>• r = 7 cm, t = 10 cm, π = 22/7<br>• Volume = π × r² × t = 22/7 × 7 × 7 × 10 = 22 × 7 × 10 = <strong>1.540 cm³</strong>`
+        tipe: "kompleks",
+        cerita: "informasi1",
+        gambar: "kantong_semar.png",
+        pertanyaan: "Contoh tumbuhan insektivora yang disebutkan dalam teks adalah… (Pilih lebih dari satu jawaban)",
+        options: [
+            "A. Bunga matahari",
+            "B. Kantong semar",
+            "C. Venus flytrap",
+            "D. Kaktus"
+        ],
+        correct: ["B. Kantong semar", "C. Venus flytrap"],
+        pembahasan: `Teks menyebutkan dua contoh: kantong semar dan venus flytrap. Bunga matahari dan kaktus adalah tumbuhan biasa, bukan pemakan serangga.`
     },
 
     // ======================================================
-    // SOAL 5 : LINGKARAN (KOMPLEKS)
+    // TEKS 3: TEMAN SEJATI (Soal 5-6)
     // ======================================================
     {
         nomor: 5,
-        tipe: "kompleks",
-        cerita: null,
-        gambar: "Lingkaran1.png",
-        pertanyaan: "Perhatikan gambar lingkaran di atas! Sebuah lingkaran memiliki Diameter 28 cm. Pernyataan yang BENAR berdasarkan informasi tersebut adalah... (π = 22/7)",
-        options: ["A. Luas lingkaran = 616 cm²", "B. Keliling lingkaran = 88 cm", "C. Luas lingkaran = 618 cm²", "D. Keliling lingkaran = 86 cm"],
-        correct: ["A. Luas lingkaran = 616 cm²", "B. Keliling lingkaran = 88 cm"],
-        pembahasan: `<strong>Pembahasan:</strong><br>• D = 28 cm → r = 14 cm<br>• Luas = π × r² = 22/7 × 14 × 14 = 616 cm² (A BENAR)<br>• Keliling = 2 × π × r = 2 × 22/7 × 14 = 88 cm (B BENAR)<br>✗ C dan D SALAH (menjebak)`
+        tipe: "cerita",
+        cerita: "fiksi2",
+        gambar: "sahabat.png",
+        pertanyaan: "Apa yang dilakukan Dina saat mengetahui Sinta tidak membawa bekal?",
+        options: [
+            "A. Dina membiarkan Sinta kelaparan",
+            "B. Dina membagi bekalnya menjadi dua",
+            "C. Dina membelikan Sinta makanan di kantin",
+            "D. Dina meminjamkan uang kepada Sinta"
+        ],
+        correct: "B. Dina membagi bekalnya menjadi dua",
+        pembahasan: `Tertulis jelas dalam teks: "Tanpa berpikir panjang, Dina membagi bekalnya menjadi dua."`
     },
-
-    // ======================================================
-    // SOAL 6 : KEBUN - BAGIAN PERSEGI
-    // ======================================================
     {
         nomor: 6,
         tipe: "cerita",
-        cerita: "kebun",
-        gambar: "sl7.png",
-        pertanyaan: "Banyak bagian persegi kecil yang dapat dibuat dari kebun tersebut adalah…",
-        options: ["A. 40", "B. 50", "C. 60", "D. 100"],
-        correct: "B. 50",
-        pembahasan: `<strong>Pembahasan:</strong><br>• Luas kebun = 20 × 10 = 200 m²<br>• Luas persegi kecil = 2 × 2 = 4 m²<br>• Banyak bagian = 200 ÷ 4 = <strong>50 bagian</strong>`
+        cerita: "fiksi2",
+        gambar: "sahabat.png",
+        pertanyaan: "Apa amanat yang dapat dipetik dari cerita tersebut?",
+        options: [
+            "A. Kita harus selalu membawa bekal ke sekolah",
+            "B. Sahabat sejati selalu ada saat kita susah",
+            "C. Jangan pernah lupa membawa uang jajan",
+            "D. Ibu selalu menasihati anaknya"
+        ],
+        correct: "B. Sahabat sejati selalu ada saat kita susah",
+        pembahasan: `Pesan utama cerita adalah tentang persahabatan sejati. Dina rela berbagi saat Sinta kesusahan.`
     },
 
     // ======================================================
-    // SOAL 7 : KEBUN - BIAYA PAGAR
+    // TEKS 4: MENGHEMAT AIR (Soal 7-8)
     // ======================================================
     {
         nomor: 7,
         tipe: "cerita",
-        cerita: "kebun",
-        gambar: "sl7.png",
-        pertanyaan: "Biaya yang diperlukan untuk membuat pagar di sekeliling kebun adalah…",
-        options: ["A. Rp2.000.000", "B. Rp3.000.000", "C. Rp4.000.000", "D. Rp5.000.000"],
-        correct: "B. Rp3.000.000",
-        pembahasan: `<strong>Pembahasan:</strong><br>• Keliling = 2 × (20 + 10) = 60 meter<br>• Biaya = 60 × Rp50.000 = <strong>Rp3.000.000</strong>`
+        cerita: "informasi2",
+        gambar: "air.png",
+        pertanyaan: "Apa penyebab air bersih semakin berkurang menurut teks?",
+        options: [
+            "A. Hujan tidak pernah turun",
+            "B. Sungai tercemar limbah dan hutan gundul",
+            "C. Manusia minum terlalu banyak air",
+            "D. Air laut naik ke permukaan"
+        ],
+        correct: "B. Sungai tercemar limbah dan hutan gundul",
+        pembahasan: `Teks menyebutkan: "Banyak sungai yang tercemar limbah. Banyak hutan yang gundul. Akibatnya, sumber air menyusut."`
     },
-
-    // ======================================================
-    // SOAL 8 : KEBUN - KOMPLEKS
-    // ======================================================
     {
         nomor: 8,
         tipe: "kompleks",
-        cerita: "kebun",
-        gambar: "sl7.png",
-        pertanyaan: "Pilih semua pernyataan yang benar!",
-        options: ["A. Luas kebun adalah 200 m²", "B. Keliling kebun adalah 60 meter", "C. Jumlah bagian persegi kecil adalah 100", "D. Jika sisi persegi kecil diperbesar, jumlah bagian akan bertambah"],
-        correct: ["A. Luas kebun adalah 200 m²", "B. Keliling kebun adalah 60 meter"],
-        pembahasan: `<strong>Pembahasan:</strong><br>✓ A. Luas = 20×10 = 200 m² (BENAR)<br>✓ B. Keliling = 2×(20+10) = 60 m (BENAR)<br>✗ C. Jumlah = 50, bukan 100 (SALAH)<br>✗ D. Sisi diperbesar → jumlah BERKURANG (SALAH)`
+        cerita: "informasi2",
+        gambar: "air.png",
+        pertanyaan: "Cara menghemat air yang TEPAT menurut teks adalah… (Pilih lebih dari satu jawaban)",
+        options: [
+            "A. Mandi dengan shower lebih lama",
+            "B. Mematikan keran saat menyikat gigi",
+            "C. Menggunakan air bekas cucian untuk menyiram tanaman",
+            "D. Menampung air hujan"
+        ],
+        correct: ["B. Mematikan keran saat menyikat gigi", "C. Menggunakan air bekas cucian untuk menyiram tanaman", "D. Menampung air hujan"],
+        pembahasan: `✗ A: Teks menyebutkan mandi dengan gayung LEBIH HEMAT daripada shower. ✓ B, C, D: Semua disebutkan dalam teks.`
     },
 
     // ======================================================
-    // SOAL 9 : PERBANDINGAN TINGGI (KOMPLEKS)
+    // TEKS 5: DOMPET YANG HILANG (Soal 9-10)
     // ======================================================
     {
         nomor: 9,
-        tipe: "kompleks",
-        cerita: "umum",
-        gambar: "tembok.png",
-        pertanyaan: "Budi mengamati tinggi tembok berbanding 5 : 1 terhadap tinggi tubuhnya. Jika tinggi Budi 171 cm, pernyataan yang BENAR adalah…",
-        options: ["A. Tinggi tembok = 855 cm", "B. Tinggi tembok = 8,55 m", "C. Jika Budi 170 cm, tembok = 850 cm", "D. Perbandingan Budi : Tembok = 1 : 5", "E. Tinggi tembok < 8 meter"],
-        correct: ["A. Tinggi tembok = 855 cm", "B. Tinggi tembok = 8,55 m", "C. Jika Budi 170 cm, tembok = 850 cm", "D. Perbandingan Budi : Tembok = 1 : 5"],
-        pembahasan: `<strong>Pembahasan:</strong><br>• Tembok = 5 × 171 = 855 cm (A BENAR)<br>• 855 cm = 8,55 m (B BENAR)<br>• 5 × 170 = 850 cm (C BENAR)<br>• Budi : Tembok = 1 : 5 (D BENAR)<br>✗ E. 8,55 m > 8 m (SALAH)`
+        tipe: "cerita",
+        cerita: "fiksi3",
+        gambar: "dompet.png",
+        pertanyaan: "Siapakah pemilik dompet yang ditemukan Andi?",
+        options: [
+            "A. Ayah Andi",
+            "B. Pak Burhan, penjaga sekolah",
+            "C. Ibu Andi",
+            "D. Teman sekelas Andi"
+        ],
+        correct: "B. Pak Burhan, penjaga sekolah",
+        pembahasan: `Teks menyebutkan: "Nama di kartu itu adalah Pak Burhan. Andi mengenal nama itu. Pak Burhan adalah penjaga sekolahnya."`
     },
-
-    // ======================================================
-    // SOAL 10 : VOLUME GABUNGAN (KUBUS & BALOK)
-    // ======================================================
     {
         nomor: 10,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "gabungan.png",
-        pertanyaan: "Bangun gabungan terdiri dari kubus (s=5 cm) dan balok (p=10, l=5, t=5 cm). Volume totalnya adalah…",
-        options: ["A. 275 cm³", "B. 325 cm³", "C. 375 cm³", "D. 425 cm³"],
-        correct: "C. 375 cm³",
-        pembahasan: `<strong>Pembahasan:</strong><br>• V kubus = 5³ = 125 cm³<br>• V balok = 10×5×5 = 250 cm³<br>• Total = 125 + 250 = <strong>375 cm³</strong>`
+        tipe: "kompleks",
+        cerita: "fiksi3",
+        gambar: "dompet.png",
+        pertanyaan: "Mengapa Andi memutuskan mengembalikan dompet itu? (Pilih lebih dari satu jawaban)",
+        options: [
+            "A. Andi takut ketahuan",
+            "B. Andi ingat pesan ibunya tentang kejujuran",
+            "C. Andi ingin dipuji orang",
+            "D. Andi mengenal pemilik dompet"
+        ],
+        correct: ["B. Andi ingat pesan ibunya tentang kejujuran", "D. Andi mengenal pemilik dompet"],
+        pembahasan: `✓ B: Andi ingat pesan ibunya. ✓ D: Andi mengenal nama Pak Burhan. ✗ A: Tidak ada yang melihat Andi. ✗ C: Andi tidak mencari pujian.`
     },
 
     // ======================================================
-    // SOAL 11 : PECAHAN CAMPURAN
+    // TEKS 6: DAUR HIDUP KUPU-KUPU (Soal 11-12)
     // ======================================================
     {
         nomor: 11,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "pecahan.png",
-        pertanyaan: "Ibu memiliki 2½ kg tepung, membeli 1¾ kg, lalu menggunakan 3⅓ kg. Sisa tepung Ibu adalah…",
-        options: ["A. 11/12 kg", "B. 1 kg", "C. 1 1/12 kg", "D. 1 1/6 kg"],
-        correct: "A. 11/12 kg",
-        pembahasan: `<strong>Pembahasan:</strong><br>• Total = 2½ + 1¾ = 5/2 + 7/4 = 10/4 + 7/4 = 17/4 kg<br>• Digunakan = 3⅓ = 10/3 kg<br>• Sisa = 17/4 - 10/3 = 51/12 - 40/12 = <strong>11/12 kg</strong>`
+        tipe: "cerita",
+        cerita: "informasi3",
+        gambar: "kupu.png",
+        pertanyaan: "Urutan daur hidup kupu-kupu yang TEPAT adalah…",
+        options: [
+            "A. Telur - kupu-kupu - ulat - kepompong",
+            "B. Telur - ulat - kepompong - kupu-kupu",
+            "C. Ulat - telur - kepompong - kupu-kupu",
+            "D. Kupu-kupu - telur - ulat - kepompong"
+        ],
+        correct: "B. Telur - ulat - kepompong - kupu-kupu",
+        pembahasan: `Daur hidup kupu-kupu: Telur → Ulat (larva) → Kepompong (pupa) → Kupu-kupu (imago). Ini disebut metamorfosis sempurna.`
     },
-
-    // ======================================================
-    // SOAL 12 : KPK
-    // ======================================================
     {
         nomor: 12,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "kpk.png",
-        pertanyaan: "Lampu A menyala tiap 8 detik, B tiap 12 detik, C tiap 15 detik. Jika menyala bersama pukul 10:00, kapan menyala bersama lagi?",
-        options: ["A. 10:01", "B. 10:02", "C. 10:03", "D. 10:04"],
-        correct: "B. 10:02",
-        pembahasan: `<strong>Pembahasan:</strong><br>• KPK 8, 12, 15:<br>8=2³, 12=2²×3, 15=3×5<br>• KPK = 2³×3×5 = 120 detik = 2 menit<br>• Menyala bersama lagi <strong>10:02</strong>`
+        tipe: "cerita",
+        cerita: "informasi3",
+        gambar: "kupu.png",
+        pertanyaan: "Apa tugas ulat dalam daur hidup kupu-kupu?",
+        options: [
+            "A. Terbang mencari nektar",
+            "B. Bertelur di bawah daun",
+            "C. Makan daun sebanyak-banyaknya",
+            "D. Berubah menjadi kepompong"
+        ],
+        correct: "C. Makan daun sebanyak-banyaknya",
+        pembahasan: `Teks menyebutkan: "Ulat bertugas makan daun sebanyak-banyaknya." Bertelur tugas kupu-kupu dewasa, berubah jadi kepompong terjadi SETELAH fase ulat.`
     },
 
     // ======================================================
-    // SOAL 13 : FPB
+    // TEKS 7: SEMUT DAN BELALANG (Soal 13-14)
     // ======================================================
     {
         nomor: 13,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "fpb.png",
-        pertanyaan: "Ibu memiliki 24 apel, 36 jeruk, 60 mangga. Banyak keranjang maksimal dengan isi sama adalah…",
-        options: ["A. 6", "B. 8", "C. 10", "D. 12"],
-        correct: "D. 12",
-        pembahasan: `<strong>Pembahasan:</strong><br>• FPB 24, 36, 60:<br>24=2³×3, 36=2²×3², 60=2²×3×5<br>• FPB = 2²×3 = 12 keranjang`
+        tipe: "cerita",
+        cerita: "fiksi4",
+        gambar: "semut.png",
+        pertanyaan: "Mengapa semut bekerja keras mengumpulkan makanan?",
+        options: [
+            "A. Karena mereka diperintah belalang",
+            "B. Karena mereka ingin bersenang-senang",
+            "C. Karena mereka bersiap untuk musim dingin",
+            "D. Karena makanan di musim panas sedikit"
+        ],
+        correct: "C. Karena mereka bersiap untuk musim dingin",
+        pembahasan: `Semut berkata: "Kami harus mengumpulkan makanan untuk musim dingin nanti."`
     },
-
-    // ======================================================
-    // SOAL 14 : SKALA PETA
-    // ======================================================
     {
         nomor: 14,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "peta.png",
-        pertanyaan: "Jarak pada peta 5 cm, skala 1 : 2.000.000. Jarak sebenarnya adalah…",
-        options: ["A. 10 km", "B. 50 km", "C. 100 km", "D. 200 km"],
-        correct: "C. 100 km",
-        pembahasan: `<strong>Pembahasan:</strong><br>• Jarak sebenarnya = 5 cm × 2.000.000 = 10.000.000 cm<br>• 10.000.000 cm = 100.000 m = <strong>100 km</strong>`
+        tipe: "kompleks",
+        cerita: "fiksi4",
+        gambar: "semut.png",
+        pertanyaan: "Akibat yang dialami belalang karena bermalas-malasan adalah… (Pilih lebih dari satu jawaban)",
+        options: [
+            "A. Belalang kelaparan saat musim dingin",
+            "B. Belalang harus meminta makanan kepada semut",
+            "C. Belalang menyesali perbuatannya",
+            "D. Belalang menjadi raja di padang rumput"
+        ],
+        correct: ["A. Belalang kelaparan saat musim dingin", "B. Belalang harus meminta makanan kepada semut", "C. Belalang menyesali perbuatannya"],
+        pembahasan: `✗ D: Belalang tidak menjadi raja, justru sengsara. ✓ A, B, C: Semua dialami belalang karena tidak mau bekerja keras.`
     },
 
     // ======================================================
-    // SOAL 15 : KECEPATAN (KOMPLEKS)
+    // TEKS 8: MANFAAT SARAPAN PAGI (Soal 15-16)
     // ======================================================
     {
         nomor: 15,
-        tipe: "kompleks",
-        cerita: null,
-        gambar: "mobil.png",
-        pertanyaan: "Mobil menempuh 180 km dalam 3 jam. Pernyataan yang BENAR adalah…",
-        options: ["A. Kecepatan = 60 km/jam", "B. Waktu 300 km = 5 jam", "C. Jarak 2 jam = 120 km", "D. Kecepatan = 50 km/jam"],
-        correct: ["A. Kecepatan = 60 km/jam", "B. Waktu 300 km = 5 jam", "C. Jarak 2 jam = 120 km"],
-        pembahasan: `<strong>Pembahasan:</strong><br>• K = 180÷3 = 60 km/jam (A BENAR)<br>• W = 300÷60 = 5 jam (B BENAR)<br>• J = 60×2 = 120 km (C BENAR)<br>✗ D SALAH`
+        tipe: "cerita",
+        cerita: "informasi4",
+        gambar: "sarapan.png",
+        pertanyaan: "Apa manfaat sarapan bagi otak menurut teks?",
+        options: [
+            "A. Otak menjadi lebih besar",
+            "B. Lebih mudah berkonsentrasi dan fokus",
+            "C. Otak tidak perlu istirahat",
+            "D. Bisa tidur lebih nyenyak"
+        ],
+        correct: "B. Lebih mudah berkonsentrasi dan fokus",
+        pembahasan: `Teks menyebutkan: "Anak yang sarapan lebih mudah berkonsentrasi. Mereka lebih fokus mendengarkan guru di kelas."`
     },
-
-    // ======================================================
-    // SOAL 16 : SATUAN PANJANG
-    // ======================================================
     {
         nomor: 16,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "penggaris.png",
-        pertanyaan: "2,5 km + 350 m + 4.500 cm = … meter",
-        options: ["A. 2.895 m", "B. 2.985 m", "C. 3.195 m", "D. 3.295 m"],
-        correct: "A. 2.895 m",
-        pembahasan: `<strong>Pembahasan:</strong><br>• 2,5 km = 2.500 m<br>• 350 m = 350 m<br>• 4.500 cm = 45 m<br>• Total = 2.500 + 350 + 45 = <strong>2.895 m</strong>`
+        tipe: "cerita",
+        cerita: "informasi4",
+        gambar: "sarapan.png",
+        pertanyaan: "Apa akibat melewatkan sarapan secara terus-menerus?",
+        options: [
+            "A. Badan menjadi lebih sehat",
+            "B. Bisa menyebabkan sakit maag",
+            "C. Berat badan cepat turun",
+            "D. Semangat belajar meningkat"
+        ],
+        correct: "B. Bisa menyebabkan sakit maag",
+        pembahasan: `Teks menyebutkan perut kosong terlalu lama bisa membuat asam lambung naik dan menyebabkan perut perih (sakit maag).`
     },
 
     // ======================================================
-    // SOAL 17 : SATUAN BERAT
+    // TEKS 9: PENSIL AJAIB (Soal 17-18)
     // ======================================================
     {
         nomor: 17,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "timbangan.png",
-        pertanyaan: "2,5 ton + 3,5 kuintal + 750 kg = … kg",
-        options: ["A. 3.500 kg", "B. 3.600 kg", "C. 3.700 kg", "D. 3.750 kg"],
-        correct: "B. 3.600 kg",
-        pembahasan: `<strong>Pembahasan:</strong><br>• 2,5 ton = 2.500 kg<br>• 3,5 kuintal = 350 kg<br>• 750 kg = 750 kg<br>• Total = 2.500 + 350 + 750 = <strong>3.600 kg</strong>`
+        tipe: "cerita",
+        cerita: "fiksi5",
+        gambar: "pensil.png",
+        pertanyaan: "Apa pesan nenek tua dalam mimpi Rara?",
+        options: [
+            "A. Gambarlah dengan pensil mahal",
+            "B. Gambarlah dengan hatimu, bukan matamu",
+            "C. Jangan pernah menggambar lagi",
+            "D. Belilah pensil baru setiap hari"
+        ],
+        correct: "B. Gambarlah dengan hatimu, bukan matamu",
+        pembahasan: `Dalam mimpi, nenek tua berkata: "Ini pensil ajaib. Gambarlah dengan hatimu, bukan dengan matamu."`
     },
-
-    // ======================================================
-    // SOAL 18 : DEBIT AIR
-    // ======================================================
     {
         nomor: 18,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "keran.png",
-        pertanyaan: "Keran mengalirkan air 2 liter/detik. Volume air selama 2,5 menit adalah…",
-        options: ["A. 150 liter", "B. 200 liter", "C. 250 liter", "D. 300 liter"],
-        correct: "D. 300 liter",
-        pembahasan: `<strong>Pembahasan:</strong><br>• Waktu = 2,5 menit = 150 detik<br>• Volume = 2 × 150 = <strong>300 liter</strong>`
+        tipe: "kompleks",
+        cerita: "fiksi5",
+        gambar: "pensil.png",
+        pertanyaan: "Apa yang membuat gambar Rara menjadi bagus? (Pilih lebih dari satu jawaban)",
+        options: [
+            "A. Pensil itu benar-benar ajaib",
+            "B. Rara menjadi percaya diri",
+            "C. Rara rajin berlatih menggambar",
+            "D. Rara mendapat bantuan dari temannya"
+        ],
+        correct: ["B. Rara menjadi percaya diri", "C. Rara rajin berlatih menggambar"],
+        pembahasan: `Teks menyebutkan: "Rara sadar bahwa pensil itu tidak ajaib. Yang ajaib adalah kepercayaan dirinya sendiri. Sejak saat itu, Rara rajin berlatih menggambar."`
     },
 
     // ======================================================
-    // SOAL 19 : LUAS GABUNGAN BANGUN DATAR
+    // TEKS 10: MENGENAL KOMODO (Soal 19-20)
     // ======================================================
     {
         nomor: 19,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "gabungan_datar.png",
-        pertanyaan: "Bangun terdiri dari persegi panjang (12×8 cm) dan segitiga (a=12, t=6 cm). Luas totalnya…",
-        options: ["A. 96 cm²", "B. 120 cm²", "C. 132 cm²", "D. 144 cm²"],
-        correct: "C. 132 cm²",
-        pembahasan: `<strong>Pembahasan:</strong><br>• L persegi = 12×8 = 96 cm²<br>• L segitiga = ½×12×6 = 36 cm²<br>• Total = 96 + 36 = <strong>132 cm²</strong>`
+        tipe: "cerita",
+        cerita: "informasi5",
+        gambar: "komodo.png",
+        pertanyaan: "Di mana komodo dapat ditemukan di Indonesia?",
+        options: [
+            "A. Pulau Jawa dan Sumatera",
+            "B. Pulau Kalimantan dan Sulawesi",
+            "C. Pulau Komodo, Rinca, Flores, dan Gili Motang",
+            "D. Pulau Bali dan Lombok"
+        ],
+        correct: "C. Pulau Komodo, Rinca, Flores, dan Gili Motang",
+        pembahasan: `Teks menyebutkan: "Komodo hanya ada di Indonesia. Tepatnya di Pulau Komodo, Rinca, Flores, dan Gili Motang."`
     },
-
-    // ======================================================
-    // SOAL 20 : PERBANDINGAN UANG (KOMPLEKS)
-    // ======================================================
     {
         nomor: 20,
         tipe: "kompleks",
-        cerita: null,
-        gambar: "uang.png",
-        pertanyaan: "Uang Andi : Budi : Caca = 3 : 5 : 7. Selisih Caca dan Andi Rp80.000. Pernyataan BENAR…",
-        options: ["A. Uang Andi = Rp60.000", "B. Uang Budi = Rp100.000", "C. Total = Rp300.000", "D. Selisih Budi-Andi = Rp40.000"],
-        correct: ["A. Uang Andi = Rp60.000", "B. Uang Budi = Rp100.000", "C. Total = Rp300.000", "D. Selisih Budi-Andi = Rp40.000"],
-        pembahasan: `<strong>Pembahasan:</strong><br>• Selisih = 7-3 = 4 bagian = 80.000 → 1 bagian = 20.000<br>• Andi = 3×20k = 60k (A BENAR)<br>• Budi = 5×20k = 100k (B BENAR)<br>• Total = 15×20k = 300k (C BENAR)<br>• Selisih = 2×20k = 40k (D BENAR)<br><strong>Semua BENAR!</strong>`
+        cerita: "informasi5",
+        gambar: "komodo.png",
+        pertanyaan: "Pernyataan yang BENAR tentang komodo adalah… (Pilih lebih dari satu jawaban)",
+        options: [
+            "A. Komodo adalah kadal terbesar di dunia",
+            "B. Komodo memakan tumbuhan dan buah-buahan",
+            "C. Air liur komodo mengandung bakteri berbahaya",
+            "D. Komodo saat ini terancam punah"
+        ],
+        correct: ["A. Komodo adalah kadal terbesar di dunia", "C. Air liur komodo mengandung bakteri berbahaya", "D. Komodo saat ini terancam punah"],
+        pembahasan: `✗ B: Komodo adalah karnivora (pemakan daging), bukan herbivora. ✓ A, C, D: Semua disebutkan dalam teks.`
     },
 
     // ======================================================
-    // SOAL 21 : VOLUME PRISMA
+    // TEKS 11: ANAK GEMBALA DAN SERIGALA (Soal 21-22)
     // ======================================================
     {
         nomor: 21,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "prisma.png",
-        pertanyaan: "Prisma segitiga dengan luas alas 24 cm² dan tinggi 15 cm. Volumenya adalah…",
-        options: ["A. 180 cm³", "B. 240 cm³", "C. 300 cm³", "D. 360 cm³"],
-        correct: "D. 360 cm³",
-        pembahasan: `<strong>Pembahasan:</strong><br>• V prisma = Luas alas × tinggi<br>• V = 24 × 15 = <strong>360 cm³</strong>`
+        tipe: "cerita",
+        cerita: "fiksi6",
+        gambar: "gembala.png",
+        pertanyaan: "Mengapa penduduk desa tidak datang saat serigala sungguhan datang?",
+        options: [
+            "A. Penduduk desa sedang sibuk bekerja",
+            "B. Penduduk desa tidak mendengar teriakan",
+            "C. Penduduk desa mengira anak gembala berbohong lagi",
+            "D. Penduduk desa takut pada serigala"
+        ],
+        correct: "C. Penduduk desa mengira anak gembala berbohong lagi",
+        pembahasan: `Teks menyebutkan: "Mereka mengira anak gembala berbohong lagi." Anak gembala sudah dua kali berbohong.`
     },
-
-    // ======================================================
-    // SOAL 22 : VOLUME KERUCUT
-    // ======================================================
     {
         nomor: 22,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "kerucut.png",
-        pertanyaan: "Kerucut dengan r=7 cm, t=12 cm. Volumenya adalah… (π=22/7)",
-        options: ["A. 516 cm³", "B. 616 cm³", "C. 716 cm³", "D. 816 cm³"],
-        correct: "B. 616 cm³",
-        pembahasan: `<strong>Pembahasan:</strong><br>• V = ⅓ × π × r² × t<br>• V = ⅓ × 22/7 × 7 × 7 × 12<br>• V = 22 × 7 × 4 = <strong>616 cm³</strong>`
+        tipe: "kompleks",
+        cerita: "fiksi6",
+        gambar: "gembala.png",
+        pertanyaan: "Amanat yang dapat dipetik dari cerita tersebut adalah… (Pilih lebih dari satu jawaban)",
+        options: [
+            "A. Jangan suka berbohong",
+            "B. Kepercayaan sulit didapat kembali jika sudah hilang",
+            "C. Bersenang-senanglah selagi masih muda",
+            "D. Domba harus dijaga dengan baik"
+        ],
+        correct: ["A. Jangan suka berbohong", "B. Kepercayaan sulit didapat kembali jika sudah hilang"],
+        pembahasan: `Cerita mengajarkan bahwa kebohongan merugikan diri sendiri dan kepercayaan yang hilang sulit didapat kembali.`
     },
 
     // ======================================================
-    // SOAL 23 : PANGKAT & AKAR
+    // TEKS 12: CARA MERAWAT GIGI (Soal 23-24)
     // ======================================================
     {
         nomor: 23,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "pangkat.png",
-        pertanyaan: "Hasil dari 12² + √625 - 5² adalah…",
-        options: ["A. 134", "B. 144", "C. 154", "D. 164"],
-        correct: "B. 144",
-        pembahasan: `<strong>Pembahasan:</strong><br>• 12² = 144<br>• √625 = 25<br>• 5² = 25<br>• Hasil = 144 + 25 - 25 = <strong>144</strong>`
+        tipe: "cerita",
+        cerita: "informasi6",
+        gambar: "gigi.png",
+        pertanyaan: "Kapan waktu yang TEPAT untuk menyikat gigi menurut teks?",
+        options: [
+            "A. Setelah bangun tidur saja",
+            "B. Setelah sarapan dan sebelum tidur malam",
+            "C. Sebelum mandi pagi",
+            "D. Setiap selesai minum air putih"
+        ],
+        correct: "B. Setelah sarapan dan sebelum tidur malam",
+        pembahasan: `Teks menyebutkan: "Sikatlah gigi minimal dua kali sehari. Lakukan setelah sarapan dan sebelum tidur malam."`
     },
-
-    // ======================================================
-    // SOAL 24 : DIAGRAM LINGKARAN (KOMPLEKS)
-    // ======================================================
     {
         nomor: 24,
-        tipe: "kompleks",
-        cerita: null,
-        gambar: "diagram.png",
-        pertanyaan: "Dari 40 siswa: 25% suka MTK, 35% IPA, 20% BHS, sisanya IPS. Pernyataan BENAR…",
-        options: ["A. Suka MTK = 10 anak", "B. Suka IPA = 14 anak", "C. Suka BHS = 8 anak", "D. Suka IPS = 8 anak"],
-        correct: ["A. Suka MTK = 10 anak", "B. Suka IPA = 14 anak", "C. Suka BHS = 8 anak", "D. Suka IPS = 8 anak"],
-        pembahasan: `<strong>Pembahasan:</strong><br>• MTK = 25%×40 = 10 (A BENAR)<br>• IPA = 35%×40 = 14 (B BENAR)<br>• BHS = 20%×40 = 8 (C BENAR)<br>• IPS = 20%×40 = 8 (D BENAR)<br><strong>Semua BENAR!</strong>`
+        tipe: "cerita",
+        cerita: "informasi6",
+        gambar: "gigi.png",
+        pertanyaan: "Mengapa kita harus mengurangi makanan manis?",
+        options: [
+            "A. Makanan manis membuat gigi kuning",
+            "B. Gula bisa membuat gigi berlubang",
+            "C. Makanan manis tidak enak",
+            "D. Makanan manis membuat gigi tanggal"
+        ],
+        correct: "B. Gula bisa membuat gigi berlubang",
+        pembahasan: `Teks menyebutkan: "Permen, cokelat, dan kue mengandung banyak gula. Gula bisa membuat gigi berlubang."`
     },
 
     // ======================================================
-    // SOAL 25 : JARAK, WAKTU, KECEPATAN
+    // TEKS 13: BAJU BARU IBU (Soal 25-26)
     // ======================================================
     {
         nomor: 25,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "bus.png",
-        pertanyaan: "Bus berangkat 07:30, kecepatan 60 km/jam, jarak 150 km. Tiba pukul…",
-        options: ["A. 09:30", "B. 09:45", "C. 10:00", "D. 10:15"],
-        correct: "C. 10:00",
-        pembahasan: `<strong>Pembahasan:</strong><br>• Waktu = 150 ÷ 60 = 2,5 jam = 2 jam 30 menit<br>• Tiba = 07:30 + 2:30 = <strong>10:00</strong>`
+        tipe: "cerita",
+        cerita: "fiksi7",
+        gambar: "baju.png",
+        pertanyaan: "Bagaimana cara Dita mendapatkan uang untuk membeli baju ibu?",
+        options: [
+            "A. Meminta uang kepada ayah",
+            "B. Menyisihkan uang jajan setiap hari",
+            "C. Bekerja membantu tetangga",
+            "D. Menjual mainannya"
+        ],
+        correct: "B. Menyisihkan uang jajan setiap hari",
+        pembahasan: `Teks menyebutkan: "Dita mulai menyisihkan uang jajannya. Ia tidak jajan di kantin sekolah."`
     },
-
-    // ======================================================
-    // SOAL 26 : RATA-RATA (MEAN)
-    // ======================================================
     {
         nomor: 26,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "nilai.png",
-        pertanyaan: "Nilai: 85, 90, 75, 80, 95. Rata-ratanya adalah…",
-        options: ["A. 83", "B. 84", "C. 85", "D. 86"],
-        correct: "C. 85",
-        pembahasan: `<strong>Pembahasan:</strong><br>• Jumlah = 85+90+75+80+95 = 425<br>• Rata-rata = 425 ÷ 5 = <strong>85</strong>`
+        tipe: "kompleks",
+        cerita: "fiksi7",
+        gambar: "baju.png",
+        pertanyaan: "Sifat Dita yang dapat kita teladani adalah… (Pilih lebih dari satu jawaban)",
+        options: [
+            "A. Hemat dan tidak boros",
+            "B. Sayang dan berbakti kepada ibu",
+            "C. Sabar menabung untuk mencapai tujuan",
+            "D. Suka membeli baju mahal"
+        ],
+        correct: ["A. Hemat dan tidak boros", "B. Sayang dan berbakti kepada ibu", "C. Sabar menabung untuk mencapai tujuan"],
+        pembahasan: `✗ D: Dita membeli baju untuk ibu, bukan untuk dirinya sendiri. ✓ A, B, C: Semua sifat baik Dita yang patut dicontoh.`
     },
 
     // ======================================================
-    // SOAL 27 : MEDIAN
+    // TEKS 14: PERMAINAN TRADISIONAL (Soal 27-28)
     // ======================================================
     {
         nomor: 27,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "data.png",
-        pertanyaan: "Tinggi badan: 145, 150, 148, 152, 149, 147. Mediannya adalah…",
-        options: ["A. 147 cm", "B. 148 cm", "C. 148,5 cm", "D. 149 cm"],
-        correct: "C. 148,5 cm",
-        pembahasan: `<strong>Pembahasan:</strong><br>• Urut: 145, 147, 148, 149, 150, 152<br>• Median = (148+149)÷2 = <strong>148,5 cm</strong>`
+        tipe: "cerita",
+        cerita: "informasi7",
+        gambar: "congklak.png",
+        pertanyaan: "Apa manfaat bermain congklak menurut teks?",
+        options: [
+            "A. Melatih kekuatan otot kaki",
+            "B. Melatih ketelitian dan strategi",
+            "C. Melatih kecepatan berlari",
+            "D. Melatih lompatan yang tinggi"
+        ],
+        correct: "B. Melatih ketelitian dan strategi",
+        pembahasan: `Teks menyebutkan: "Permainan ini melatih ketelitian dan strategi."`
     },
-
-    // ======================================================
-    // SOAL 28 : MODUS
-    // ======================================================
     {
         nomor: 28,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "modus.png",
-        pertanyaan: "Nilai: 7, 8, 9, 7, 8, 10, 9, 7, 8, 9. Modusnya adalah…",
-        options: ["A. 7 dan 8", "B. 7 dan 9", "C. 8 dan 9", "D. 7, 8, dan 9"],
-        correct: "D. 7, 8, dan 9",
-        pembahasan: `<strong>Pembahasan:</strong><br>• 7 muncul 3×, 8 muncul 3×, 9 muncul 3×, 10 muncul 1×<br>• Modus = <strong>7, 8, dan 9</strong>`
+        tipe: "kompleks",
+        cerita: "informasi7",
+        gambar: "congklak.png",
+        pertanyaan: "Kelebihan permainan tradisional dibanding gawai adalah… (Pilih lebih dari satu jawaban)",
+        options: [
+            "A. Tidak membutuhkan biaya mahal",
+            "B. Membuat tubuh bergerak aktif",
+            "C. Melatih bersosialisasi dengan teman",
+            "D. Bisa dimainkan sendirian di kamar"
+        ],
+        correct: ["A. Tidak membutuhkan biaya mahal", "B. Membuat tubuh bergerak aktif", "C. Melatih bersosialisasi dengan teman"],
+        pembahasan: `✗ D: Permainan tradisional biasanya dimainkan bersama-sama, bukan sendirian. ✓ A, B, C: Semua kelebihan yang disebutkan dalam teks.`
     },
 
     // ======================================================
-    // SOAL 29 : LUAS PERMUKAAN BOLA
+    // TEKS 15: LAYANG-LAYANG PUTUS (Soal 29-30)
     // ======================================================
     {
         nomor: 29,
-        tipe: "bangun-ruang",
-        cerita: null,
-        gambar: "bola.png",
-        pertanyaan: "Bola dengan jari-jari 7 cm. Luas permukaannya adalah… (π=22/7)",
-        options: ["A. 308 cm²", "B. 462 cm²", "C. 616 cm²", "D. 770 cm²"],
-        correct: "C. 616 cm²",
-        pembahasan: `<strong>Pembahasan:</strong><br>• L = 4 × π × r²<br>• L = 4 × 22/7 × 7 × 7<br>• L = 4 × 22 × 7 = <strong>616 cm²</strong>`
+        tipe: "cerita",
+        cerita: "fiksi8",
+        gambar: "layangan.png",
+        pertanyaan: "Siapa yang membuat layang-layang untuk Bayu?",
+        options: [
+            "A. Ibunya",
+            "B. Temannya",
+            "C. Ayahnya",
+            "D. Kakeknya"
+        ],
+        correct: "C. Ayahnya",
+        pembahasan: `Teks menyebutkan: "Ayahnya yang membuatkan khusus untuknya."`
     },
-
-    // ======================================================
-    // SOAL 30 : SKALA DENAH (KOMPLEKS)
-    // ======================================================
     {
         nomor: 30,
         tipe: "kompleks",
-        cerita: null,
-        gambar: "denah.png",
-        pertanyaan: "Denah skala 1:200, panjang denah 6 cm, lebar 4 cm. Pernyataan BENAR…",
-        options: ["A. Panjang sebenarnya = 12 m", "B. Lebar sebenarnya = 8 m", "C. Luas sebenarnya = 96 m²", "D. Keliling sebenarnya = 40 m"],
-        correct: ["A. Panjang sebenarnya = 12 m", "B. Lebar sebenarnya = 8 m", "C. Luas sebenarnya = 96 m²", "D. Keliling sebenarnya = 40 m"],
-        pembahasan: `<strong>Pembahasan:</strong><br>• P = 6×200 = 1200 cm = 12 m (A BENAR)<br>• L = 4×200 = 800 cm = 8 m (B BENAR)<br>• Luas = 12×8 = 96 m² (C BENAR)<br>• Keliling = 2×(12+8) = 40 m (D BENAR)<br><strong>Semua BENAR!</strong>`
+        cerita: "fiksi8",
+        gambar: "layangan.png",
+        pertanyaan: "Mengapa Bayu akhirnya tersenyum meskipun layang-layangnya putus? (Pilih lebih dari satu jawaban)",
+        options: [
+            "A. Ia mendapat layang-layang baru",
+            "B. Ia percaya layangannya menjadi bintang",
+            "C. Hatinya menjadi tenang setelah mendengar perkataan anak kecil",
+            "D. Ayahnya berjanji membuatkan lagi"
+        ],
+        correct: ["B. Ia percaya layangannya menjadi bintang", "C. Hatinya menjadi tenang setelah mendengar perkataan anak kecil"],
+        pembahasan: `✓ B dan C: Disebutkan dalam teks. ✗ A dan D: Tidak disebutkan dalam cerita.`
     }
 ];
-
     // ========== FUNGSI RENDER GAMBAR ==========
     function renderGambar(soal) {
         const namaGambar = soal.gambar;
