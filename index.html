@@ -449,95 +449,251 @@
     // ========== KONFIGURASI UJIAN ==========
     const WAKTU_UJIAN_MENIT = 75;
     
-    // ========== KUMPULAN CERITA ==========
-    const CERITA = {
-        bazar: {
-            judul: "📖 CERITA BAKSOS (BAZAR KREASI OSIS)",
-            class: "bazar",
-            konten: `
-                Di sebuah sekolah, diadakan kegiatan bazar. Panitia menyediakan 3 jenis paket makanan:<br>
-                <div class="ringkasan-paket">
-                    <div class="paket-card">
-                        <span class="paket-nama">📦 Paket A</span><br>
-                        <span class="paket-isi">½ kue + 2 roti</span>
-                    </div>
-                    <div class="paket-card">
-                        <span class="paket-nama">📦 Paket B</span><br>
-                        <span class="paket-isi">¾ kue + 1 roti</span>
-                    </div>
-                    <div class="paket-card">
-                        <span class="paket-nama">📦 Paket C</span><br>
-                        <span class="paket-isi">1 kue + 4 roti</span>
-                    </div>
-                </div>
-                Pada hari itu, panitia membuat:<br>
-                <span class="highlight">8 paket A</span> &nbsp;|&nbsp; 
-                <span class="highlight">4 paket B</span> &nbsp;|&nbsp; 
-                <span class="highlight">2 paket C</span><br>
-                <span style="font-size:12px; display:block; margin-top:5px;">
-                📌 Setiap 1 kue utuh dipotong menjadi 4 bagian sama besar.<br>
-                💰 Harga 1 roti = Rp2.000
-                </span>
-            `
-        },
-        perjalanan: {
-            judul: "🚗 CERITA PERJALANAN LIBURAN",
-            class: "perjalanan",
-            konten: `
-                Keluarga Pak Budi pergi berlibur ke pantai.<br>
-                <div style="background:white; padding:10px; border-radius:8px; margin:10px 0;">
-                    <span class="highlight">📍 Jarak rumah ke pantai = 120 km</span><br>
-                    <span class="highlight">🏃 Kecepatan rata-rata = 60 km/jam</span><br>
-                    <span class="highlight">🕐 Berangkat pukul 06:30 WIB</span><br>
-                    <span class="highlight">☕ Istirahat 30 menit di tengah jalan</span>
-                </div>
-                <span style="font-size:12px;">Gunakan informasi di atas untuk menjawab soal!</span>
-            `
-        },
-        toko: {
-            judul: "Kebun Sayuran",
-            class: "kebun",
-            konten: `
-                Di sebuah desa, terdapat sebuah kebun berbentuk persegi panjang dengan panjang 20 meter dan lebar 10 meter.
-Kebun tersebut akan dibagi menjadi beberapa bagian sama besar untuk ditanami sayuran.
-Setiap bagian berbentuk persegi dengan sisi 2 meter.
-Selain itu, pemilik kebun ingin membuat pagar di sekeliling kebun.
-Biaya pembuatan pagar adalah Rp50.000 per meter.:<br>
-            `
-        },
-        kebun: {
-            judul: "🌳 CERITA KEBUN BINATANG",
-            class: "kebun",
-            konten: `
-                SD Ceria mengadakan karyawisata ke kebun binatang.<br>
-                <div style="background:white; padding:10px; border-radius:8px; margin:10px 0;">
-                    👥 Jumlah siswa = 120 anak<br>
-                    🚌 1 bus muat 30 anak<br>
-                    🎫 Tiket masuk = Rp15.000/anak<br>
-                    🍱 Biaya makan = Rp20.000/anak
-                </div>
-            `
-        },
-        umum: {
-            judul: "📚 INFORMASI SOAL",
-            class: "umum",
-            konten: `
-                Bacalah soal dengan teliti dan pilih jawaban yang paling tepat!
-            `
-        }, 
-kebun: {
-    judul: "🌱 CERITA KEBUN SAYUR",
-    class: "kebun",
-    konten: `
-        Di sebuah desa, terdapat sebuah kebun berbentuk persegi panjang dengan panjang 20 meter dan lebar 10 meter.<br>
-        Kebun tersebut akan dibagi menjadi beberapa bagian sama besar untuk ditanami sayuran.<br>
-        Setiap bagian berbentuk persegi dengan sisi 2 meter.<br>
-        Selain itu, pemilik kebun ingin membuat pagar di sekeliling kebun.<br>
-        <span class="highlight">Biaya pembuatan pagar adalah Rp50.000 per meter.</span>
-    `
-}
-    };
+    // ========== KUMPULAN CERITA/TEKS BACAAN (15 TEKS) ==========
+const CERITA = {
+    // ======================================================
+    // TEKS 1: FIKSI - KELINCI YANG SOMBONG (185 kata)
+    // ======================================================
+    fiksi1: {
+        judul: "🐇 BACAAN 1: KELINCI YANG SOMBONG",
+        class: "kebun",
+        konten: `
+            <strong>Bacalah cerita berikut dengan saksama!</strong><br><br>
+            Di sebuah padang rumput yang luas, hiduplah seekor kelinci. Ia memiliki kaki yang kuat dan dapat berlari sangat cepat. Setiap hari, ia berlari ke sana kemari sambil membanggakan dirinya. "Akulah hewan tercepat di padang ini. Tidak ada yang bisa mengalahkanku!" serunya dengan sombong.<br><br>
+            Suatu sore, ia bertemu dengan kura-kura yang berjalan lambat. Kelinci tertawa terbahak-bahak. "Hai kura-kura, jalanmu lambat sekali! Bagaimana kamu bisa sampai ke mana-mana?" ejek kelinci.<br><br>
+            Kura-kura hanya tersenyum. "Memang aku lambat. Tapi aku tidak pernah berhenti berusaha," jawabnya tenang.<br><br>
+            "Kalau begitu, ayo kita balapan! Aku pasti menang," tantang kelinci dengan penuh percaya diri. Kura-kura menerima tantangan itu.<br><br>
+            Saat balapan dimulai, kelinci langsung melesat jauh. Ia menoleh ke belakang dan tidak melihat kura-kura. Merasa pasti menang, kelinci memutuskan untuk tidur di bawah pohon rindang. Sementara itu, kura-kura terus berjalan perlahan tanpa berhenti.<br><br>
+            Ketika kelinci terbangun, matahari sudah hampir terbenam. Ia berlari sekuat tenaga menuju garis akhir. Namun, ia terlambat. Kura-kura sudah sampai lebih dulu. Kelinci tertunduk malu. Ia menyesali kesombongannya.
+        `
+    },
 
+    // ======================================================
+    // TEKS 2: INFORMASI - TUMBUHAN PEMAKAN SERANGGA (195 kata)
+    // ======================================================
+    informasi1: {
+        judul: "🌿 BACAAN 2: TUMBUHAN PEMAKAN SERANGGA",
+        class: "toko",
+        konten: `
+            <strong>Bacalah teks informasi berikut dengan saksama!</strong><br><br>
+            Tumbuhan biasanya membuat makanan sendiri. Mereka menggunakan sinar matahari, air, dan udara. Proses ini disebut fotosintesis. Namun, ada beberapa tumbuhan yang berbeda. Mereka juga memakan serangga. Tumbuhan ini disebut tumbuhan insektivora.<br><br>
+            Mengapa tumbuhan ini memakan serangga? Mereka hidup di tanah yang kurang unsur hara. Tanahnya miskin nitrogen dan mineral lain. Untuk bertahan hidup, mereka menangkap serangga sebagai sumber makanan tambahan.<br><br>
+            Contoh tumbuhan insektivora adalah kantong semar. Kantong semar memiliki daun berbentuk seperti kantong. Di dalam kantong ada cairan lengket. Serangga yang masuk akan terperangkap dan tenggelam. Cairan itu lalu mencerna tubuh serangga secara perlahan.<br><br>
+            Contoh lain adalah venus flytrap. Tumbuhan ini memiliki daun seperti perangkap. Daunnya akan menutup cepat saat serangga menyentuh bulu-bulu halus di permukaannya. Serangga tidak bisa melarikan diri. Tumbuhan lalu mengeluarkan cairan pencerna.<br><br>
+            Meskipun memakan serangga, tumbuhan ini tetap melakukan fotosintesis. Serangga hanya menjadi makanan tambahan bagi mereka.
+        `
+    },
+
+    // ======================================================
+    // TEKS 3: FIKSI - TEMAN SEJATI (175 kata)
+    // ======================================================
+    fiksi2: {
+        judul: "🐱 BACAAN 3: TEMAN SEJATI",
+        class: "bazar",
+        konten: `
+            <strong>Bacalah cerita berikut dengan saksama!</strong><br><br>
+            Sinta dan Dina bersahabat sejak kelas satu. Mereka selalu bermain bersama. Mereka juga belajar bersama di rumah.<br><br>
+            Suatu hari, Sinta lupa membawa bekal. Perutnya keroncongan saat istirahat. Dina melihat Sinta yang hanya duduk termenung. "Kenapa kamu tidak makan?" tanya Dina.<br><br>
+            "Aku lupa membawa bekal," jawab Sinta pelan.<br><br>
+            Tanpa berpikir panjang, Dina membagi bekalnya menjadi dua. "Ini untukmu. Kita makan bersama," kata Dina sambil tersenyum.<br><br>
+            Sinta sangat terharu. Matanya berkaca-kaca. "Terima kasih, Dina. Kamu memang sahabat terbaikku."<br><br>
+            Sepulang sekolah, Sinta bercerita kepada ibunya. Ibu Sinta tersenyum bangga. "Dina adalah teman sejati. Dia rela berbagi saat kamu susah. Jagalah persahabatan kalian baik-baik."<br><br>
+            Sejak hari itu, Sinta dan Dina semakin akrab. Mereka berjanji akan selalu menjadi sahabat selamanya.
+        `
+    },
+
+    // ======================================================
+    // TEKS 4: INFORMASI - MENGHEMAT AIR (185 kata)
+    // ======================================================
+    informasi2: {
+        judul: "💧 BACAAN 4: MENGHEMAT AIR",
+        class: "perjalanan",
+        konten: `
+            <strong>Bacalah teks informasi berikut dengan saksama!</strong><br><br>
+            Air adalah sumber kehidupan. Semua makhluk hidup membutuhkan air. Manusia butuh air untuk minum dan mandi. Tumbuhan butuh air untuk tumbuh. Hewan juga butuh air untuk hidup.<br><br>
+            Namun, air bersih semakin berkurang. Banyak sungai yang tercemar limbah. Banyak hutan yang gundul. Akibatnya, sumber air menyusut. Kita harus menghemat air bersih.<br><br>
+            Ada banyak cara menghemat air. Pertama, matikan keran saat menyikat gigi. Kedua, gunakan air bekas cucian untuk menyiram tanaman. Ketiga, mandi dengan gayung lebih hemat daripada shower. Keempat, tampung air hujan untuk keperluan sehari-hari.<br><br>
+            Dengan menghemat air, kita membantu menjaga bumi. Air bersih akan tetap tersedia untuk masa depan. Anak cucu kita nanti masih bisa menikmati air yang jernih dan sehat. Mari hemat air mulai dari sekarang.
+        `
+    },
+
+    // ======================================================
+    // TEKS 5: FIKSI - DOMPET YANG HILANG (170 kata)
+    // ======================================================
+    fiksi3: {
+        judul: "⭐ BACAAN 5: DOMPET YANG HILANG",
+        class: "umum",
+        konten: `
+            <strong>Bacalah cerita berikut dengan saksama!</strong><br><br>
+            Pagi itu, Andi berjalan ke sekolah. Di tengah jalan, ia melihat sebuah dompet tergeletak. Andi mengambil dompet itu. Ia membukanya perlahan.<br><br>
+            Di dalam dompet ada uang yang cukup banyak. Ada juga kartu identitas pemiliknya. Nama di kartu itu adalah Pak Burhan. Andi mengenal nama itu. Pak Burhan adalah penjaga sekolahnya.<br><br>
+            Andi berpikir sejenak. Ia bisa saja mengambil uang itu. Tidak ada yang melihatnya. Namun, Andi ingat pesan ibunya. "Jujurlah selalu, Nak. Kejujuran lebih berharga dari uang."<br><br>
+            Andi segera berlari ke sekolah. Ia mencari Pak Burhan. "Pak, ini dompet Bapak. Saya temukan di jalan," kata Andi.<br><br>
+            Pak Burhan sangat terkejut dan gembira. "Terima kasih, Andi. Kamu anak yang jujur. Uang ini untuk membeli obat ibuku." Andi tersenyum lega. Ia bangga telah berbuat jujur.
+        `
+    },
+
+    // ======================================================
+    // TEKS 6: INFORMASI - DAUR HIDUP KUPU-KUPU (190 kata)
+    // ======================================================
+    informasi3: {
+        judul: "🦋 BACAAN 6: DAUR HIDUP KUPU-KUPU",
+        class: "toko",
+        konten: `
+            <strong>Bacalah teks informasi berikut dengan saksama!</strong><br><br>
+            Kupu-kupu adalah serangga yang indah. Sayapnya berwarna-warni dan menarik perhatian. Namun, tahukah kamu bahwa kupu-kupu tidak langsung lahir dengan sayap cantik? Kupu-kupu mengalami proses perubahan bentuk yang disebut metamorfosis sempurna.<br><br>
+            Daur hidup kupu-kupu dimulai dari telur. Telur diletakkan di bawah daun oleh induknya. Telur menetas menjadi larva yang disebut ulat. Ulat bertugas makan daun sebanyak-banyaknya. Ulat tumbuh dengan cepat dan berganti kulit beberapa kali.<br><br>
+            Setelah cukup besar, ulat berubah menjadi kepompong. Kepompong menempel di ranting atau daun. Di dalam kepompong, tubuh ulat berubah total. Proses ini memakan waktu beberapa hari hingga berminggu-minggu.<br><br>
+            Akhirnya, kepompong pecah dan keluarlah kupu-kupu muda. Sayapnya masih basah dan kusut. Kupu-kupu harus menunggu sayapnya kering dan mengembang. Setelah itu, ia siap terbang mencari nektar bunga. Kupu-kupu dewasa akan bertelur dan daur hidup berulang kembali.
+        `
+    },
+
+    // ======================================================
+    // TEKS 7: FIKSI - SEMUT DAN BELALANG (180 kata)
+    // ======================================================
+    fiksi4: {
+        judul: "🐜 BACAAN 7: SEMUT DAN BELALANG",
+        class: "kebun",
+        konten: `
+            <strong>Bacalah cerita berikut dengan saksama!</strong><br><br>
+            Pada musim panas yang cerah, seekor belalang asyik bernyanyi dan bermain. Ia melompat dari satu ranting ke ranting lain. Sementara itu, semut-semut bekerja keras mengumpulkan makanan. Mereka mengangkut biji-bijian ke dalam sarang.<br><br>
+            "Hai semut, kenapa kalian bekerja terus? Hari ini cerah sekali. Ayo bermain bersamaku!" ajak belalang.<br><br>
+            "Kami harus mengumpulkan makanan untuk musim dingin nanti. Kamu juga sebaiknya begitu," jawab seekor semut sambil terus bekerja.<br><br>
+            Belalang tertawa. "Musim dingin masih lama. Aku masih punya banyak waktu." Ia pun kembali bernyanyi dan bermain.<br><br>
+            Waktu berlalu dengan cepat. Musim dingin tiba. Udara menjadi sangat dingin. Semua tumbuhan layu dan tertutup salju. Belalang kelaparan dan kedinginan. Ia tidak punya makanan sama sekali.<br><br>
+            Belalang teringat pada semut. Ia pergi ke sarang semut dan meminta makanan. Semut-semut memberinya makan. "Nasihat kami dulu tidak kamu dengarkan. Sekarang belajarlah dari kesalahanmu," kata semut. Belalang menyesal dan berjanji akan bekerja keras mulai sekarang.
+        `
+    },
+
+    // ======================================================
+    // TEKS 8: INFORMASI - MANFAAT SARAPAN PAGI (175 kata)
+    // ======================================================
+    informasi4: {
+        judul: "🍳 BACAAN 8: MANFAAT SARAPAN PAGI",
+        class: "bazar",
+        konten: `
+            <strong>Bacalah teks informasi berikut dengan saksama!</strong><br><br>
+            Sarapan adalah kegiatan makan di pagi hari. Sarapan sangat penting bagi tubuh kita. Sayangnya, banyak orang melewatkan sarapan. Mereka beralasan terburu-buru atau tidak sempat.<br><br>
+            Padahal, sarapan memberi banyak manfaat. Pertama, sarapan memberi energi untuk beraktivitas. Setelah tidur semalaman, perut kita kosong. Tubuh butuh bahan bakar baru. Dengan sarapan, kita jadi bersemangat belajar dan bermain.<br><br>
+            Kedua, sarapan membantu otak bekerja lebih baik. Anak yang sarapan lebih mudah berkonsentrasi. Mereka lebih fokus mendengarkan guru di kelas. Nilai pelajaran mereka juga cenderung lebih bagus.<br><br>
+            Ketiga, sarapan mencegah sakit maag. Perut kosong terlalu lama bisa membuat asam lambung naik. Ini menyebabkan perut terasa perih dan mual.<br><br>
+            Jadi, jangan pernah melewatkan sarapan. Pilihlah menu sarapan yang sehat dan bergizi. Nasi, roti, telur, sayur, dan buah adalah pilihan yang baik.
+        `
+    },
+
+    // ======================================================
+    // TEKS 9: FIKSI - PENSIL AJAIB (185 kata)
+    // ======================================================
+    fiksi5: {
+        judul: "✏️ BACAAN 9: PENSIL AJAIB",
+        class: "umum",
+        konten: `
+            <strong>Bacalah cerita berikut dengan saksama!</strong><br><br>
+            Rara merasa sedih. Ia tidak pandai menggambar. Setiap kali menggambar, hasilnya selalu jelek. Teman-temannya sering menertawakan gambarnya.<br><br>
+            Suatu malam, Rara bermimpi aneh. Seorang nenek tua memberinya sebuah pensil. "Ini pensil ajaib. Gambarlah dengan hatimu, bukan dengan matamu," kata nenek itu.<br><br>
+            Paginya, Rara melihat ada pensil di mejanya. Pensil itu sama seperti dalam mimpinya. Ia teringat pesan nenek tua itu. Rara mulai menggambar. Ia tidak memikirkan apakah gambarnya bagus atau tidak. Ia hanya menggambar apa yang ia rasakan.<br><br>
+            Ajaib! Gambarnya menjadi indah. Pohon yang ia gambar tampak hidup. Bunga-bunga tampak mekar dan berwarna. Rara tidak percaya dengan apa yang dilihatnya.<br><br>
+            Di sekolah, Rara menunjukkan gambarnya. Teman-temannya terkejut dan kagum. "Gambarmu bagus sekali, Rara!" puji mereka. Rara tersenyum. Ia sadar bahwa pensil itu tidak ajaib. Yang ajaib adalah kepercayaan dirinya sendiri. Sejak saat itu, Rara rajin berlatih menggambar. Gambarnya semakin hari semakin bagus.
+        `
+    },
+
+    // ======================================================
+    // TEKS 10: INFORMASI - MENGENAL KOMODO (190 kata)
+    // ======================================================
+    informasi5: {
+        judul: "🦎 BACAAN 10: MENGENAL KOMODO",
+        class: "perjalanan",
+        konten: `
+            <strong>Bacalah teks informasi berikut dengan saksama!</strong><br><br>
+            Indonesia memiliki hewan purba yang masih hidup. Hewan itu adalah komodo. Komodo hanya ada di Indonesia. Tepatnya di Pulau Komodo, Rinca, Flores, dan Gili Motang. Komodo adalah kadal terbesar di dunia.<br><br>
+            Komodo bisa tumbuh hingga panjang tiga meter. Beratnya bisa mencapai tujuh puluh kilogram. Kulitnya bersisik dan keras seperti baju besi. Ekornya panjang dan kuat. Komodo menggunakan ekornya untuk menjaga keseimbangan dan melawan musuh.<br><br>
+            Komodo adalah hewan karnivora. Ia memakan daging hewan lain. Mangsanya antara lain rusa, babi hutan, dan kerbau. Komodo memiliki air liur yang mengandung bakteri berbahaya. Satu gigitan saja bisa membuat mangsa lemah dan mati. Komodo lalu mengikuti mangsanya sampai mati.<br><br>
+            Saat ini, komodo terancam punah. Jumlahnya semakin sedikit. Pemerintah mendirikan Taman Nasional Komodo untuk melindungi hewan ini. Kita harus ikut menjaga agar komodo tidak punah.
+        `
+    },
+
+    // ======================================================
+    // TEKS 11: FIKSI - ANAK GEMBALA DAN SERIGALA (170 kata)
+    // ======================================================
+    fiksi6: {
+        judul: "🐑 BACAAN 11: ANAK GEMBALA DAN SERIGALA",
+        class: "kebun",
+        konten: `
+            <strong>Bacalah cerita berikut dengan saksama!</strong><br><br>
+            Di sebuah desa, hiduplah seorang anak gembala. Tugasnya menjaga domba-domba milik penduduk desa. Setiap hari, ia membawa domba ke padang rumput.<br><br>
+            Suatu hari, anak gembala merasa bosan. Ia ingin bersenang-senang. Tiba-tiba ia berteriak keras. "Tolong! Tolong! Ada serigala! Serigala mau makan domba!"<br><br>
+            Penduduk desa segera berlarian datang. Mereka membawa tongkat dan parang. Namun, sesampainya di padang rumput, tidak ada serigala. Anak gembala tertawa terbahak-bahak. "Kalian tertipu! Aku hanya bercanda."<br><br>
+            Penduduk desa marah dan pulang dengan kesal. Beberapa hari kemudian, anak gembala mengulangi perbuatannya. Ia berteriak minta tolong lagi. Penduduk desa kembali datang dan kembali tertipu.<br><br>
+            Seminggu kemudian, serigala sungguhan datang. Anak gembala ketakutan. Ia berteriak sekencang-kencangnya minta tolong. Namun, tidak ada penduduk yang datang. Mereka mengira anak gembala berbohong lagi. Akhirnya, serigala memakan semua domba. Anak gembala menangis menyesali perbuatannya.
+        `
+    },
+
+    // ======================================================
+    // TEKS 12: INFORMASI - CARA MERAWAT GIGI (180 kata)
+    // ======================================================
+    informasi6: {
+        judul: "🦷 BACAAN 12: CARA MERAWAT GIGI",
+        class: "toko",
+        konten: `
+            <strong>Bacalah teks informasi berikut dengan saksama!</strong><br><br>
+            Gigi adalah bagian tubuh yang sangat penting. Gigi membantu kita mengunyah makanan. Gigi juga membuat penampilan kita menarik. Oleh karena itu, kita harus merawat gigi dengan baik.<br><br>
+            Cara pertama merawat gigi adalah menyikat gigi secara teratur. Sikatlah gigi minimal dua kali sehari. Lakukan setelah sarapan dan sebelum tidur malam. Gunakan sikat gigi yang berbulu lembut. Ganti sikat gigi setiap tiga bulan sekali.<br><br>
+            Cara kedua adalah menggunakan pasta gigi yang mengandung fluoride. Fluoride membantu melindungi gigi dari kerusakan. Oleskan pasta gigi sebesar biji jagung saja.<br><br>
+            Cara ketiga adalah mengurangi makanan manis. Permen, cokelat, dan kue mengandung banyak gula. Gula bisa membuat gigi berlubang. Jika makan makanan manis, segera kumur atau sikat gigi.<br><br>
+            Cara keempat adalah memeriksakan gigi ke dokter setiap enam bulan sekali. Dokter gigi akan membersihkan karang gigi dan menambal gigi yang berlubang. Gigi yang sehat membuat kita percaya diri.
+        `
+    },
+
+    // ======================================================
+    // TEKS 13: FIKSI - BAJU BARU IBU (175 kata)
+    // ======================================================
+    fiksi7: {
+        judul: "👗 BACAAN 13: BAJU BARU IBU",
+        class: "bazar",
+        konten: `
+            <strong>Bacalah cerita berikut dengan saksama!</strong><br><br>
+            Dita melihat baju ibu sudah lusuh dan pudar warnanya. "Ibu, beli baju baru dong. Baju Ibu sudah jelek," kata Dita.<br><br>
+            Ibu tersenyum. "Tidak apa-apa, Dita. Baju Ibu masih bagus. Lebih baik uangnya untuk beli buku dan sepatu barumu."<br><br>
+            Dita terdiam. Ia tahu ibunya selalu mendahulukan kebutuhannya. Dita ingin sekali membelikan baju untuk ibu. Tapi ia tidak punya uang.<br><br>
+            Sejak hari itu, Dita mulai menyisihkan uang jajannya. Ia tidak jajan di kantin sekolah. Ia membawa bekal dari rumah. Setiap hari, ia memasukkan uang ke dalam celengannya.<br><br>
+            Tiga bulan kemudian, celengan Dita sudah penuh. Ia menghitung uangnya. Jumlahnya cukup untuk membeli baju baru. Dita pergi ke pasar bersama ayahnya. Ia memilih baju berwarna biru muda, warna kesukaan ibu.<br><br>
+            Saat Dita memberikan baju itu, ibu menangis haru. "Terima kasih, Nak. Ibu sangat sayang padamu." Dita memeluk ibunya erat-erat. Ia bahagia bisa membahagiakan ibunya.
+        `
+    },
+
+    // ======================================================
+    // TEKS 14: INFORMASI - PERMAINAN TRADISIONAL (190 kata)
+    // ======================================================
+    informasi7: {
+        judul: "🎮 BACAAN 14: PERMAINAN TRADISIONAL",
+        class: "umum",
+        konten: `
+            <strong>Bacalah teks informasi berikut dengan saksama!</strong><br><br>
+            Indonesia kaya akan permainan tradisional. Permainan ini diwariskan dari nenek moyang kita. Sayangnya, sekarang banyak anak lebih suka bermain gawai. Padahal, permainan tradisional sangat menyenangkan dan menyehatkan.<br><br>
+            Contoh permainan tradisional adalah congklak. Congklak dimainkan oleh dua orang. Mereka menggunakan papan kayu berlubang dan biji-bijian. Permainan ini melatih ketelitian dan strategi.<br><br>
+            Ada juga permainan lompat tali. Tali terbuat dari karet gelang yang dirangkai panjang. Dua orang memegang ujung tali. Satu orang melompat di atas tali. Permainan ini melatih kelincahan dan kekuatan kaki.<br><br>
+            Permainan gobak sodor juga sangat seru. Permainan ini dimainkan secara berkelompok. Ada kelompok yang menjaga garis dan kelompok yang menyerang. Permainan ini mengajarkan kerja sama dan kekompakan.<br><br>
+            Permainan tradisional tidak membutuhkan biaya mahal. Alatnya mudah dibuat dari bahan sekitar. Yang terpenting, permainan ini membuat kita bergerak aktif dan bersosialisasi dengan teman.
+        `
+    },
+
+    // ======================================================
+    // TEKS 15: FIKSI - LAYANG-LAYANG PUTUS (185 kata)
+    // ======================================================
+    fiksi8: {
+        judul: "🪁 BACAAN 15: LAYANG-LAYANG PUTUS",
+        class: "perjalanan",
+        konten: `
+            <strong>Bacalah cerita berikut dengan saksama!</strong><br><br>
+            Senja itu, Bayu bermain layang-layang di lapangan. Layang-layangnya terbang tinggi di angkasa. Warnanya merah menyala. Ekornya panjang melambai-lambai. Bayu sangat menyayangi layang-layang itu. Ayahnya yang membuatkan khusus untuknya.<br><br>
+            Tiba-tiba, angin bertiup sangat kencang. Benang layang-layang Bayu terlepas dari tangannya. Layang-layang itu terbang semakin tinggi dan jauh. Bayu berlari mengejarnya. Tapi layang-layang itu semakin menjauh.<br><br>
+            Bayu menangis tersedu-sedu. Ia duduk di lapangan sampai matahari terbenam. Seorang anak kecil menghampirinya. "Kak, kenapa menangis?" tanya anak itu.<br><br>
+            "Layang-layangku putus. Ayahku yang membuatnya," jawab Bayu sedih.<br><br>
+            Anak kecil itu tersenyum. "Aku juga pernah kehilangan layang-layang. Tapi ayahku bilang, layang-layang yang putus akan terbang ke langit dan menjadi bintang. Lihat, bintang paling terang itu pasti layang-layang Kakak."<br><br>
+            Bayu mendongak. Ia melihat sebuah bintang berkelap-kelip terang. Bayu tersenyum. Hatinya menjadi tenang. Ia pulang dengan perasaan lebih baik.
+        `
+    }
+};
 // ========== DATA SOAL (30 SOAL) ==========
 const soalList = [
     // ======================================================
