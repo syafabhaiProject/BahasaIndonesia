@@ -1206,67 +1206,35 @@ const soalList = [
         pembahasan: `✓ B dan C: Disebutkan dalam teks. ✗ A dan D: Tidak disebutkan dalam cerita.`
     }
 ];
-    // ========== FUNGSI RENDER GAMBAR ==========
-    function renderGambar(soal) {
-        const namaGambar = soal.gambar;
-        const isCerita = soal.tipe === "cerita";
-        const isTabung = soal.gambar && soal.gambar.includes("tabung");
-        const isLingkaran = soal.gambar && soal.gambar.includes("Lingkaran");
-        
-        let placeholderContent = '';
-        
-        if (isCerita) {
-            placeholderContent = `
-                <div style="display:flex; align-items:center; justify-content:center; gap:10px; padding:10px;">
-                    <span style="font-size:40px;">🏫🎪</span>
-                    <span style="font-size:30px;">🍰🍞📦</span>
-                </div>
-                <div style="font-size:12px;">Paket A (½ kue) | Paket B (¾ kue) | Paket C (1 kue)</div>
-                <div style="font-size:13px; margin-top:5px;"><strong>8 paket A &nbsp; 4 paket B &nbsp; 2 paket C</strong></div>
-            `;
-        } else if (isTabung) {
-            placeholderContent = `
-                <div style="padding:10px;">
-                    <div style="font-size:45px;">🥫🧴</div>
-                    <div style="font-size:13px; margin-top:5px;">
-                        <strong>TABUNG</strong><br>
-                        r = 7 cm | t = 10 cm
-                    </div>
-                </div>
-            `;
-        } else if (isLingkaran) {
-            placeholderContent = `
-                <div style="padding:10px;">
-                    <div style="font-size:45px;">⚪🔵</div>
-                    <div style="font-size:13px; margin-top:5px;">
-                        <strong>LINGKARAN</strong><br>
-                        D = 28 cm | r = 14 cm | π = 22/7
-                    </div>
-                </div>
-            `;
-        } else {
-            placeholderContent = `
-                <div style="padding:10px;">
-                    <div style="font-size:45px;">📐📏</div>
-                    <div style="font-size:13px; margin-top:5px;">
-                        <strong>GAMBAR SOAL</strong>
-                    </div>
-                </div>
-            `;
-        }
-        
-        return `
-            <div class="gambar-placeholder">
-                <img src="${namaGambar}" alt="Gambar Soal ${soal.nomor}" 
-                     style="max-width:100%; border-radius:8px;"
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <div style="display:none;">
-                    ${placeholderContent}
-                </div>
-                <div class="gambar-caption">📸 Gambar: ${namaGambar}</div>
+    // ========== FUNGSI RENDER GAMBAR (VERSI BAHASA INDONESIA) ==========
+function renderGambar(soal) {
+    const namaGambar = soal.gambar;
+    
+    // Placeholder netral untuk semua soal
+    const placeholderContent = `
+        <div style="display:flex; align-items:center; justify-content:center; gap:10px; padding:10px;">
+            <span style="font-size:45px;">📖📚</span>
+        </div>
+        <div style="font-size:14px; margin-top:5px;">
+            <strong>📸 Ilustrasi Soal ${soal.nomor}</strong>
+        </div>
+        <div style="font-size:12px; color:#666; margin-top:5px;">
+            ${soal.pertanyaan.substring(0, 50)}...
+        </div>
+    `;
+    
+    return `
+        <div class="gambar-placeholder">
+            <img src="${namaGambar}" alt="Gambar Soal ${soal.nomor}" 
+                 style="max-width:100%; border-radius:8px;"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display:none;">
+                ${placeholderContent}
             </div>
-        `;
-    }
+            <div class="gambar-caption">📸 Gambar: ${namaGambar}</div>
+        </div>
+    `;
+}
 
     // ========== VARIABEL GLOBAL ==========
     let currentSoal = 0;
