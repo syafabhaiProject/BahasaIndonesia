@@ -3,21 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cara Bj. Habiebie mengubah pemahaman kita tentang pesawat</title>
+<title>Revolusi Struktur Pesawat - B.J. Habibie</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: red;
+  background: linear-gradient(135deg, #020617, #0f172a, #1e3a8a);
   color: white;
-
 }
 
 /* Materi */
 #materi {
-  padding: 15px;
-  background: #2c3e50;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+#materi h2 {
+  color: #60a5fa;
+}
+
+/* Canvas */
+#container {
+  position: relative;
 }
 
 /* Tools */
@@ -25,7 +33,7 @@ body {
   display: flex;
   gap: 5px;
   padding: 10px;
-  background: #222;
+  background: #111;
 }
 
 button, input {
@@ -35,13 +43,9 @@ button, input {
 }
 
 /* Canvas */
-#container {
-  position: relative;
-}
-
 canvas {
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   background: white;
   touch-action: none;
 }
@@ -51,9 +55,35 @@ canvas {
 <body>
 
 <div id="materi">
-  <h2>Kalkulus - Turunan</h2>
-  <p>Turunan menunjukkan perubahan suatu fungsi.</p>
-  <p><b>Contoh:</b> f(x) = x² → f'(x) = 2x</p>
+  <h2>Revolusi Struktur Pesawat oleh B.J. Habibie</h2>
+
+  <p>
+    B.J. Habibie mengubah cara dunia memahami struktur pesawat,
+    terutama dalam menganalisis retakan kecil pada material.
+  </p>
+
+  <h3>Masalah</h3>
+  <p>
+    Pesawat mengalami tekanan berulang saat terbang yang dapat menimbulkan retakan kecil.
+    Retakan ini bisa berkembang dan menjadi berbahaya jika tidak dianalisis dengan tepat.
+  </p>
+
+  <h3>Solusi</h3>
+  <p>
+    Habibie mengembangkan metode untuk memprediksi pertumbuhan retakan,
+    sehingga dapat diketahui kapan struktur pesawat harus diperbaiki.
+  </p>
+
+  <h3>Dampak</h3>
+  <ul>
+    <li>Keselamatan penerbangan meningkat</li>
+    <li>Desain pesawat lebih efisien</li>
+    <li>Digunakan dalam industri penerbangan modern</li>
+  </ul>
+</div>
+
+<div id="container">
+  <canvas id="board"></canvas>
 </div>
 
 <div id="tools">
@@ -65,10 +95,6 @@ canvas {
   <button onclick="drawGraph()">Grafik</button>
 </div>
 
-<div id="container">
-  <canvas id="board"></canvas>
-</div>
-
 <script>
 const canvas = document.getElementById('board');
 const ctx = canvas.getContext('2d');
@@ -77,7 +103,6 @@ let drawing = false;
 let mode = 'draw';
 let color = document.getElementById('colorPicker').value;
 
-// resize
 function resizeCanvas() {
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
@@ -85,28 +110,23 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
-// mode
 function setMode(m) {
   mode = m;
 }
 
-// warna
 document.getElementById('colorPicker').addEventListener('input', (e) => {
   color = e.target.value;
 });
 
-// touch start
 canvas.addEventListener('touchstart', () => {
   drawing = true;
 });
 
-// touch end
 canvas.addEventListener('touchend', () => {
   drawing = false;
   ctx.beginPath();
 });
 
-// touch move
 canvas.addEventListener('touchmove', (e) => {
   if (!drawing) return;
 
@@ -120,7 +140,7 @@ canvas.addEventListener('touchmove', (e) => {
     ctx.globalCompositeOperation = 'source-over';
     ctx.strokeStyle = color;
     ctx.lineWidth = 3;
-  } else if (mode === 'erase') {
+  } else {
     ctx.globalCompositeOperation = 'destination-out';
     ctx.lineWidth = 20;
   }
@@ -132,12 +152,10 @@ canvas.addEventListener('touchmove', (e) => {
   ctx.moveTo(x, y);
 });
 
-// clear semua
 function clearCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-// grid koordinat
 function drawGrid() {
   clearCanvas();
   ctx.strokeStyle = '#ddd';
@@ -158,7 +176,6 @@ function drawGrid() {
   }
 }
 
-// grafik y = x^2
 function drawGraph() {
   drawGrid();
 
