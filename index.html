@@ -2,203 +2,825 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Revolusi Struktur Pesawat - B.J. Habibie</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>⚔️ YOUKAI ⚔️</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Roboto Slab', serif;
-  background: url('biru.jpeg') repeat;
-background-size: cover;
-  color: white;
+*{
+  box-sizing:border-box;
+  font-family:'Segoe UI',Arial,sans-serif;
+  -webkit-tap-highlight-color:transparent;
 }
 
-#materi {
-  padding: 20px;
-  line-height: 1.7;
-  background: rgba(0,0,0,0.5);
+body{
+  background:linear-gradient(145deg,#2b1e10,#4a3822);
+  min-height:100vh;
+  margin:0;
+  padding:6px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  touch-action:manipulation;
+  user-select:none;
 }
 
-#materi h2 {
-  font-size: 24px;
+.game-container{
+  width:100%;
+  max-width:100%;
+  background:rgba(255,240,200,0.15);
+  backdrop-filter:blur(18px);
+  border-radius:18px;
+  padding:10px 6px;
+  box-shadow:0 15px 25px rgba(0,0,0,0.7);
+  border:2px solid #c9a04b;
 }
 
-
-#container {
-  position: relative;
+h2{
+  font-size:1.4rem;
+  color:#ffd78b;
+  text-shadow:0 3px 0 #5a3e1a;
+  text-align:center;
+  margin:0 0 4px;
 }
 
-/* Tools */
-#tools {
-  display: flex;
-  gap: 5px;
-  padding: 10px;
-  background: rgba(0,0,0,0.8);
+.kingdom-names{
+  display:flex;
+  justify-content:space-between;
+  font-weight:bold;
+  font-size:0.7rem;
+  background:#1f1407cc;
+  border-radius:16px;
+  padding:5px 10px;
+  margin:3px 0 5px;
+  color:#f7e37c;
+  border:1px solid #bf9b4b;
 }
 
-button, input {
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: none;
+#info{
+  background:#160f03;
+  color:#ffd966;
+  padding:5px 10px;
+  border-radius:16px;
+  font-weight:bold;
+  font-size:0.75rem;
+  margin-bottom:5px;
+  border:1px solid #e5b13b;
+  text-align:center;
 }
 
-/* Canvas */
-canvas {
-  width: 100%;
-  height: 50vh;
-  background: white;
-  touch-action: none;
+.main-layout{
+  display:flex;
+  gap:5px;
+  justify-content:center;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+
+#board{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  grid-template-rows:repeat(8,1fr);
+  width:min(58vw,340px);
+  height:min(66vw,390px);
+  background:#2e2412;
+  padding:2px;
+  border-radius:14px;
+  box-shadow:inset 0 0 10px black;
+  border:2px solid #cbae6b;
+  gap:1px;
+}
+
+.cell{
+  aspect-ratio:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:clamp(12px,3vw,22px);
+  cursor:pointer;
+  font-weight:bold;
+  border:1px solid #4b3a1e;
+}
+
+.black{background:#3b2e1c;color:white}
+.white{background:#ecd9b4;color:black}
+
+.kingdom{
+  background:#f5c542!important;
+  box-shadow:0 0 8px gold;
+  border:2px solid #b8860b;
+}
+
+.move{
+  background:#c94b4b!important;
+  box-shadow:0 0 6px #ff5e5e;
+}
+
+.block-place{
+  background:#ff8c00!important;
+  box-shadow:0 0 8px orange;
+  border:2px dashed yellow;
+  animation:pulse 0.5s infinite;
+}
+
+@keyframes pulse{
+  0%{opacity:0.7}
+  50%{opacity:1}
+  100%{opacity:0.7}
+}
+
+.right-panel{
+  background:#1f180a;
+  border-radius:14px;
+  padding:4px;
+  border:2px solid #aa8c4a;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  align-items:center;
+  width:min(30vw,125px);
+  font-size:0.6rem;
+}
+
+.unit-status{
+  background:#241e0c;
+  border-radius:8px;
+  padding:4px;
+  width:100%;
+  color:#f3e0a2;
+  font-size:0.58rem;
+  max-height:160px;
+  overflow-y:auto;
+}
+
+.card-deck{
+  background:#31240a;
+  border-radius:8px;
+  padding:4px;
+  color:#efdb9b;
+  font-weight:bold;
+  width:100%;
+  text-align:center;
+}
+
+button{
+  background:#b4913c;
+  border:none;
+  color:#221c08;
+  font-weight:bold;
+  font-size:0.65rem;
+  padding:6px 5px;
+  border-radius:12px;
+  cursor:pointer;
+  box-shadow:0 2px 0 #5a401a;
+  margin:1px;
+  width:100%;
+  border:1px solid #e7be5a;
+}
+
+.card-item{
+  background:#f7e9c3;
+  border-radius:4px;
+  padding:2px 4px;
+  font-size:0.7rem;
+  font-weight:bold;
+  display:inline-block;
+}
+
+.mode-indicator{
+  background:#ff4500;
+  color:white;
+  padding:3px 5px;
+  border-radius:6px;
+  font-size:0.6rem;
+  font-weight:bold;
+  animation:pulse 0.5s infinite;
+}
+
+.dead-unit{
+  text-decoration:line-through;
+  opacity:0.5;
+}
+
+/* HISTORY PANEL */
+.history-panel{
+  background:#1a1204;
+  border-radius:8px;
+  padding:4px;
+  width:100%;
+  margin-top:2px;
+  max-height:80px;
+  overflow-y:auto;
+  font-size:0.55rem;
+  color:#f7e37c;
+  border:1px solid #aa8c4a;
+  text-align:left;
+}
+
+.history-panel b{
+  display:block;
+  text-align:center;
+  font-size:0.6rem;
+  color:#ffd78b;
+}
+
+.copy-btn{
+  background:#5a8a3c;
+  border:1px solid #8cba5a;
+  font-size:0.55rem;
+  padding:3px 4px;
+  margin-top:1px;
 }
 </style>
 </head>
 
 <body>
 
-<div id="materi">
-  <h2>Revolusi Struktur Pesawat oleh B.J. Habibie</h2>
+<div class="game-container">
 
-  <p>
-    B.J. Habibie mengubah cara dunia memahami struktur pesawat,
-    terutama dalam menganalisis retakan kecil pada material.
-  </p>
+<h2>🍂 YOUKAI 🍂</h2>
 
-  <h3>Masalah</h3>
-  <p>
-    Pesawat mengalami tekanan berulang saat terbang yang dapat menimbulkan retakan kecil.
-    Retakan ini bisa berkembang dan menjadi berbahaya jika tidak dianalisis dengan tepat.
-  </p>
-
-  <h3>Solusi</h3>
-  <p>
-    Habibie mengembangkan metode untuk memprediksi pertumbuhan retakan,
-    sehingga dapat diketahui kapan struktur pesawat harus diperbaiki.
-  </p>
-
-  <h3>Dampak</h3>
-  <ul>
-    <li>Keselamatan penerbangan meningkat</li>
-    <li>Desain pesawat lebih efisien</li>
-    <li>Digunakan dalam industri penerbangan modern</li>
-  </ul>
+<div class="kingdom-names">
+  <span id="k1Label">🏰 K1</span>
+  <span>⚔️</span>
+  <span id="k2Label">🏯 K2</span>
 </div>
 
-<div id="container">
-  <canvas id="board"></canvas>
+<p id="info">⚡ Setup</p>
+
+<div class="main-layout">
+
+<div id="board"></div>
+
+<div class="right-panel">
+
+<div class="unit-status" id="unitDisp"></div>
+
+<div class="card-deck">
+<div>📜 GACHA</div>
+
+<div id="cardInfo">🃏 40</div>
+
+<div id="cardHand"></div>
+
+<div id="modeInd" style="display:none"></div>
+
+<button id="drawBtn">
+🎴 AUTO
+</button>
+
+<button id="cancelBlk" style="display:none;background:#777">
+❌ Batal
+</button>
+
 </div>
 
-<div id="tools">
-  <button onclick="setMode('draw')">✍️ Tulis</button>
-  <button onclick="setMode('erase')">🧽 Hapus</button>
-  <input type="color" id="colorPicker" value="#000000">
-  <button onclick="clearCanvas()">Clear</button>
-  <button onclick="drawGrid()">Grid</button>
-  <button onclick="drawGraph()">Grafik</button>
+<!-- HISTORY -->
+<div class="history-panel" id="historyPanel">
+<b>📜 History</b>
+<div id="historyText" style="word-break:break-all">-</div>
+<button class="copy-btn" id="copyHistory">📋 Salin History</button>
+</div>
+
+</div>
+</div>
 </div>
 
 <script>
-const canvas = document.getElementById('board');
-const ctx = canvas.getContext('2d');
+(function(){
 
-let drawing = false;
-let mode = 'draw';
-let color = document.getElementById('colorPicker').value;
+const boardEl=document.getElementById("board");
+const info=document.getElementById("info");
+const unitDisp=document.getElementById("unitDisp");
+const cardHand=document.getElementById("cardHand");
+const cardInfo=document.getElementById("cardInfo");
+const drawBtn=document.getElementById("drawBtn");
+const cancelBlk=document.getElementById("cancelBlk");
+const modeInd=document.getElementById("modeInd");
+const k1Label=document.getElementById("k1Label");
+const k2Label=document.getElementById("k2Label");
+const historyText=document.getElementById("historyText");
+const copyHistory=document.getElementById("copyHistory");
 
-function resizeCanvas() {
-  canvas.width = canvas.offsetWidth;
-  canvas.height = canvas.offsetHeight;
+let grid=Array(8).fill().map(()=>Array(7).fill(null));
+
+const K1=[7,3];
+const K2=[0,3];
+
+let cp=1;
+let phase="name1";
+let sel=null;
+let go=false;
+
+let units={1:[],2:[]};
+let spawn={1:[],2:[]};
+
+let stype=["K","P","P"];
+let sc=0;
+
+let kn1="K1";
+let kn2="K2";
+
+let deck=[];
+let card=null;
+
+let blkMode=false;
+let lastClick=0;
+
+// HISTORY ARRAY
+let moveHistory=[];
+let turnCount=0;
+
+// KONVERSI KOLOM KE HURUF
+const colToAlpha = ['A','B','C','D','E','F','G'];
+const rowToNum = (r) => (8 - r); // baris 0 => 8, baris 7 => 1
+
+function posToNotation(r,c){
+  return colToAlpha[c] + rowToNum(r);
 }
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
 
-function setMode(m) {
-  mode = m;
+function addHistory(unit, fromR, fromC, toR, toC, playerName, cardUsed){
+  turnCount++;
+  let uEmoji = unit.type==='K' ? '🤴' : '⚔️';
+  let fromNot = posToNotation(fromR, fromC);
+  let toNot = posToNotation(toR, toC);
+  let cardStr = cardUsed ? ` [${cardUsed}]` : '';
+  let entry = `${turnCount}. ${playerName} ${uEmoji}: ${fromNot}→${toNot}${cardStr}`;
+  moveHistory.push(entry);
+  updateHistoryDisplay();
 }
 
-document.getElementById('colorPicker').addEventListener('input', (e) => {
-  color = e.target.value;
-});
+function addKillHistory(killer, victim, atR, atC, playerName){
+  let kEmoji = killer.type==='K' ? '🤴' : '⚔️';
+  let vEmoji = victim.type==='K' ? '🤴' : '⚔️';
+  let pos = posToNotation(atR, atC);
+  let entry = `   💀 ${playerName} ${kEmoji} bunuh ${vEmoji} di ${pos}`;
+  moveHistory.push(entry);
+  updateHistoryDisplay();
+}
 
-canvas.addEventListener('touchstart', () => {
-  drawing = true;
-});
+function addBlockHistory(atR, atC, playerName){
+  let pos = posToNotation(atR, atC);
+  let entry = `${turnCount}. 🧱 ${playerName} pasang block di ${pos}`;
+  moveHistory.push(entry);
+  updateHistoryDisplay();
+}
 
-canvas.addEventListener('touchend', () => {
-  drawing = false;
-  ctx.beginPath();
-});
+function addDeathHistory(unit, atR, atC, playerName){
+  let uEmoji = unit.type==='K' ? '🤴' : '⚔️';
+  let pos = atR!==null && atC!==null ? posToNotation(atR, atC) : '?';
+  let entry = `   ☠ ${playerName} ${uEmoji} mati di ${pos}`;
+  moveHistory.push(entry);
+  updateHistoryDisplay();
+}
 
-canvas.addEventListener('touchmove', (e) => {
-  if (!drawing) return;
+function addWinHistory(playerName){
+  let entry = `🏆 ${playerName} MENANG!`;
+  moveHistory.push(entry);
+  updateHistoryDisplay();
+}
 
-  const touch = e.touches[0];
-  const rect = canvas.getBoundingClientRect();
-
-  const x = touch.clientX - rect.left;
-  const y = touch.clientY - rect.top;
-
-  if (mode === 'draw') {
-    ctx.globalCompositeOperation = 'source-over';
-    ctx.strokeStyle = color;
-    ctx.lineWidth = 3;
+function updateHistoryDisplay(){
+  if(moveHistory.length===0){
+    historyText.innerText = '-';
   } else {
-    ctx.globalCompositeOperation = 'destination-out';
-    ctx.lineWidth = 20;
-  }
-
-  ctx.lineCap = 'round';
-  ctx.lineTo(x, y);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.moveTo(x, y);
-});
-
-function clearCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-function drawGrid() {
-  clearCanvas();
-  ctx.strokeStyle = '#ddd';
-  ctx.lineWidth = 1;
-
-  for (let x = 0; x < canvas.width; x += 25) {
-    ctx.beginPath();
-    ctx.moveTo(x, 0);
-    ctx.lineTo(x, canvas.height);
-    ctx.stroke();
-  }
-
-  for (let y = 0; y < canvas.height; y += 25) {
-    ctx.beginPath();
-    ctx.moveTo(0, y);
-    ctx.lineTo(canvas.width, y);
-    ctx.stroke();
+    historyText.innerText = moveHistory.join('\n');
   }
 }
 
-function drawGraph() {
-  drawGrid();
+// COPY HISTORY
+copyHistory.onclick = function(){
+  let text = moveHistory.join('\n');
+  if(text===''){
+    alert('Belum ada history!');
+    return;
+  }
+  navigator.clipboard.writeText(text).then(()=>{
+    alert('📋 History berhasil disalin!');
+  }).catch(()=>{
+    // fallback
+    let ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    alert('📋 History berhasil disalin!');
+  });
+};
 
-  ctx.strokeStyle = 'red';
-  ctx.lineWidth = 2;
+const CT={
+  M1:'⬆️+1',
+  D1:'⬇️-1',
+  M2:'⏫+2',
+  D2:'⏬-2',
+  BL:'🧱',
+  LP:'🦘',
+  LC:'🍀'
+};
 
-  ctx.beginPath();
+function em(u){
+  if(!u)return '';
+  if(u.type==='BL')return '🧱';
+  return u.p===1
+    ? (u.type==='K'?'🤴':'⚔️')
+    : (u.type==='K'?'🤴🏿':'⚔️🏿');
+}
 
-  for (let x = -150; x < 150; x++) {
-    let y = (x * x) / 50;
+function initDeck(){
+  deck=[];
+  for(let i=0;i<8;i++){ deck.push(CT.M1,CT.D1); }
+  for(let i=0;i<4;i++){ deck.push(CT.M2,CT.D2,CT.LP,CT.LC); }
+  for(let i=0;i<8;i++){ deck.push(CT.BL); }
+  for(let i=deck.length-1;i>0;i--){
+    let j=Math.floor(Math.random()*(i+1));
+    [deck[i],deck[j]]=[deck[j],deck[i]];
+  }
+}
 
-    let drawX = canvas.width / 2 + x;
-    let drawY = canvas.height / 2 - y;
+function drawCard(){
+  if(deck.length===0){ initDeck(); }
+  let c=deck.pop();
+  if(c===CT.LC){
+    let arr=[CT.M1,CT.D1,CT.M2,CT.D2,CT.BL,CT.LP];
+    c=arr[Math.floor(Math.random()*arr.length)];
+    alert("🍀 Lucky : "+c);
+  }
+  return c;
+}
 
-    ctx.lineTo(drawX, drawY);
+function updCard(){
+  cardHand.innerHTML= card ? `<span class="card-item">${card}</span>` : `<span style="color:#aaa">-</span>`;
+  cardInfo.innerText=`🃏 ${deck.length}`;
+}
+
+function updUI(){
+  let h="";
+  for(let p=1;p<=2;p++){
+    h+=`<b>${p===1?kn1:kn2}</b><br>`;
+    units[p].forEach(u=>{
+      h+=`<div class="${u.a?'':'dead-unit'}">${em(u)} ${u.type==='K'?'R':'P'} ❤${Math.max(0,u.l)} ${u.a?'':'☠'}</div>`;
+    });
+  }
+  unitDisp.innerHTML=h;
+}
+
+function getMoves(u){
+  let m=[];
+  for(let r=0;r<8;r++){
+    for(let c=0;c<7;c++){
+      if(cp===1 && r===K1[0] && c===K1[1])continue;
+      if(cp===2 && r===K2[0] && c===K2[1])continue;
+      let dr=Math.abs(u.r-r);
+      let dc=Math.abs(u.c-c);
+      let valid=false;
+      if(u.type==='K'){ valid=dr<=1 && dc<=1 && (dr+dc>0); }
+      if(u.type==='P'){ valid=(dr===1&&dc===0)||(dr===0&&dc===1); }
+      if(!valid)continue;
+      let t=grid[r][c];
+      if(t && t.p===u.p)continue;
+      m.push([r,c]);
+    }
+  }
+  return m;
+}
+
+function getBlockMoves(){
+  let m=[];
+  for(let r=0;r<8;r++){
+    for(let c=0;c<7;c++){
+      if(!grid[r][c]){ m.push([r,c]); }
+    }
+  }
+  return m;
+}
+
+function analyzeMove(u,r,c){
+  let score=0;
+  let target=cp===1?K2:K1;
+  let dist=Math.abs(target[0]-r)+Math.abs(target[1]-c);
+  if(dist<=1){ score+=100; }
+  else if(dist<=2){ score+=4; }
+  let t=grid[r][c];
+  if(t && t.p!==u.p){
+    score+=3;
+    if(t.type==='K'){ score+=20; }
+  }
+  for(let rr=0;rr<8;rr++){
+    for(let cc=0;cc<7;cc++){
+      let e=grid[rr][cc];
+      if(e && e.p!==u.p && e.type!=='BL' && e.a){
+        let dr=Math.abs(rr-r);
+        let dc=Math.abs(cc-c);
+        let hit=false;
+        if(e.type==='K'){ hit=dr<=1&&dc<=1&&(dr+dc>0); }
+        if(e.type==='P'){ hit=(dr===1&&dc===0)||(dr===0&&dc===1); }
+        if(hit){ score-=3; }
+      }
+    }
+  }
+  if(t && t.type==='BL'){ score-=10; }
+  return score;
+}
+
+function drawBoard(moves=[],blocks=[]){
+  boardEl.innerHTML="";
+  for(let r=0;r<8;r++){
+    for(let c=0;c<7;c++){
+      let cell=document.createElement("div");
+      cell.className="cell "+(r<4?"black":"white");
+      if((r===K1[0]&&c===K1[1])||(r===K2[0]&&c===K2[1])){ cell.classList.add("kingdom"); }
+      let isMove=moves.some(m=>m[0]===r&&m[1]===c);
+      let score=0;
+      if(sel && isMove){ score=analyzeMove(sel,r,c); }
+      if(isMove){
+        cell.classList.add("move");
+        if(score>=5){ cell.style.background="#0f8f3d"; cell.style.boxShadow="0 0 12px lime"; }
+        else if(score<=-2){ cell.style.background="#b22222"; cell.style.boxShadow="0 0 12px red"; }
+      }
+      if(blocks.some(m=>m[0]===r&&m[1]===c)){ cell.classList.add("block-place"); }
+      let u=grid[r][c];
+      if(u){ cell.innerText=em(u); }
+      if(isMove){
+        let tip=document.createElement("div");
+        tip.style.position="absolute";
+        tip.style.bottom="1px";
+        tip.style.fontSize="8px";
+        tip.style.fontWeight="bold";
+        tip.style.pointerEvents="none";
+        tip.style.textShadow="1px 1px 2px black";
+        if(score>=5){ tip.innerText="GOOD"; tip.style.color="#7CFF7C"; }
+        else if(score<=-2){ tip.innerText="RISK"; tip.style.color="#FF7777"; }
+        else{ tip.innerText="OK"; tip.style.color="#ffe082"; }
+        cell.style.position="relative";
+        cell.appendChild(tip);
+      }
+      let rr=r; let cc=c;
+      cell.addEventListener("pointerup",function(e){ e.preventDefault(); click(rr,cc); });
+      boardEl.appendChild(cell);
+    }
+  }
+}
+
+function kingWin(u){
+  if(!u || !u.a)return false;
+  if(cp===1 && u.r===K2[0] && u.c===K2[1]){
+    addWinHistory(kn1);
+    alert(kn1+" MENANG!");
+    go=true;
+    return true;
+  }
+  if(cp===2 && u.r===K1[0] && u.c===K1[1]){
+    addWinHistory(kn2);
+    alert(kn2+" MENANG!");
+    go=true;
+    return true;
+  }
+  return false;
+}
+
+function killUnit(u, killer, atR, atC){
+  if(u.r!=null && u.c!=null && grid[u.r][u.c]===u){ grid[u.r][u.c]=null; }
+  let pName = u.p===1 ? kn1 : kn2;
+  addDeathHistory(u, atR!==null?atR:u.r, atC!==null?atC:u.c, pName);
+  u.a=false;
+  u.l=0;
+  u.r=null;
+  u.c=null;
+}
+
+function damage(u, attacker){
+  u.l--;
+  if(u.l<=0){
+    if(u.r!=null && u.c!=null && grid[u.r][u.c]===u){ grid[u.r][u.c]=null; }
+    let pName = u.p===1 ? kn1 : kn2;
+    addDeathHistory(u, u.r, u.c, pName);
+    u.a=false;
+    u.r=null;
+    u.c=null;
+    return;
+  }
+  respawn(u);
+}
+
+function respawn(u){
+  if(u.r!=null && u.c!=null && grid[u.r][u.c]===u){ grid[u.r][u.c]=null; }
+  let sp=spawn[u.p].find(s=>s.type===u.type);
+  if(!sp){ u.a=false; return; }
+  let sr=sp.r; let sc=sp.c;
+  let dir=u.p===1?-1:1;
+  for(let i=0;i<8;i++){
+    let cr=sr+(dir*i); let cc=sc;
+    if(cr<0 || cr>7)break;
+    if(grid[cr][cc] && grid[cr][cc].type==='BL'){ grid[cr][cc]=null; }
+    if(!grid[cr][cc]){
+      u.r=cr; u.c=cc; u.a=true;
+      grid[cr][cc]=u;
+      return;
+    }
+  }
+  u.a=false;
+}
+
+function moveUnit(u,tr,tc, cardUsed){
+  let fromR=u.r, fromC=u.c;
+  let t=grid[tr][tc];
+  let pName = u.p===1 ? kn1 : kn2;
+
+  if(t && t.type==='BL'){
+    alert("💀 Kena block!");
+    addHistory(u, fromR, fromC, tr, tc, pName, cardUsed);
+    addDeathHistory(u, tr, tc, pName);
+    killUnit(u, null, tr, tc);
+    grid[tr][tc]=null;
+    return false;
   }
 
-  ctx.stroke();
+  if(t && t.p!==u.p){
+    addKillHistory(u, t, tr, tc, pName);
+    damage(t, u);
+  }
+
+  if(u.r!=null && u.c!=null && grid[u.r][u.c]===u){ grid[u.r][u.c]=null; }
+  u.r=tr; u.c=tc;
+  grid[tr][tc]=u;
+
+  addHistory(u, fromR, fromC, tr, tc, pName, cardUsed);
+  kingWin(u);
+  return true;
 }
+
+function autoMove(u,step,dir){
+  let d=(cp===1) ? (dir==='m'?-1:1) : (dir==='m'?1:-1);
+  let cr=u.r; let cc=u.c;
+  let fromR=cr, fromC=cc;
+  let pName = u.p===1 ? kn1 : kn2;
+
+  for(let i=0;i<Math.abs(step);i++){
+    let nr=cr+d; let nc=cc;
+    if(nr<0||nr>7)break;
+    let cl=grid[nr][nc];
+    if(cl && cl.type==='BL'){
+      alert("💀 BLOCK!");
+      addHistory(u, fromR, fromC, nr, nc, pName, card);
+      addDeathHistory(u, nr, nc, pName);
+      killUnit(u, null, nr, nc);
+      grid[nr][nc]=null;
+      return;
+    }
+    if(cl && cl.p===u.p){ break; }
+    cr=nr; cc=nc;
+  }
+  if(cr===u.r && cc===u.c)return;
+  moveUnit(u,cr,cc, card);
+}
+
+function applyCard(u,c){
+  if(!u.a || go)return;
+  if(c===CT.M1){ autoMove(u,1,'m'); }
+  else if(c===CT.D1){ autoMove(u,1,'b'); }
+  else if(c===CT.M2){ autoMove(u,2,'m'); }
+  else if(c===CT.D2){ autoMove(u,2,'b'); }
+  else if(c===CT.BL){
+    blkMode=true;
+    cancelBlk.style.display='block';
+    modeInd.style.display='block';
+    modeInd.innerText='🧱 Pilih tempat';
+    drawBoard([],getBlockMoves());
+    return;
+  }
+  drawBoard();
+  updUI();
+}
+
+function click(r,c){
+  let now=Date.now();
+  if(now-lastClick<150)return;
+  lastClick=now;
+  if(go)return;
+
+  if(blkMode){
+    if(grid[r][c]){ alert("❌ Terisi!"); return; }
+    // hapus block lama
+    for(let rr=0;rr<8;rr++){
+      for(let cc=0;cc<7;cc++){
+        if(grid[rr][cc] && grid[rr][cc].type==='BL'){ grid[rr][cc]=null; }
+      }
+    }
+    grid[r][c]={ type:'BL', p:cp, l:1, r:r, c:c, a:true };
+    let pName = cp===1 ? kn1 : kn2;
+    addBlockHistory(r, c, pName);
+    blkMode=false;
+    card=null;
+    cancelBlk.style.display='none';
+    modeInd.style.display='none';
+    drawBoard();
+    updUI();
+    endTurn();
+    return;
+  }
+
+  if(phase==="name1"){
+    kn1=prompt("Nama P1","Naga Api")||"K1";
+    k1Label.innerText="🏰 "+kn1;
+    phase="name2";
+    info.innerText="Nama P2";
+    return;
+  }
+
+  if(phase==="name2"){
+    kn2=prompt("Nama P2","Serigala Es")||"K2";
+    k2Label.innerText="🏯 "+kn2;
+    phase="setup1";
+    cp=1;
+    info.innerText=`${kn1} setup`;
+    return;
+  }
+
+  if(phase==="setup1" || phase==="setup2"){
+    let row=phase==="setup1"?7:0;
+    if(r!==row)return;
+    if(grid[r][c])return;
+    if((r===K1[0]&&c===K1[1])||(r===K2[0]&&c===K2[1])){ return; }
+    let t=stype[sc];
+    let u={ type:t, p:cp, l:t==='K'?2:3, r:r, c:c, a:true };
+    grid[r][c]=u;
+    units[cp].push(u);
+    spawn[cp].push({ r:r, c:c, type:t });
+    sc++;
+    if(sc===3){
+      sc=0;
+      if(phase==="setup1"){ phase="setup2"; cp=2; info.innerText=`${kn2} setup`; }
+      else{ phase="play"; cp=1; initDeck(); info.innerText=`🎌 ${kn1}`; }
+    }
+    drawBoard();
+    updUI();
+    return;
+  }
+
+  if(phase==="play"){
+    let u=grid[r][c];
+    if(sel){
+      let valid=getMoves(sel).some(m=>m[0]===r&&m[1]===c);
+      if(!valid){ sel=null; drawBoard(); return; }
+      moveUnit(sel,r,c, null);
+      if(go)return;
+      let cd=drawCard();
+      card=cd;
+      updCard();
+      alert("🎴 "+cd);
+      applyCard(sel,cd);
+      sel=null;
+      if(!blkMode){ endTurn(); }
+      return;
+    }
+    if(u && u.p===cp && u.type!=='BL'){ sel=u; drawBoard(getMoves(u)); }
+  }
+}
+
+cancelBlk.onclick=function(){
+  blkMode=false;
+  card=null;
+  cancelBlk.style.display='none';
+  modeInd.style.display='none';
+  endTurn();
+};
+
+function endTurn(){
+  if(go)return;
+  cp=cp===1?2:1;
+  info.innerText=`🎌 ${cp===1?kn1:kn2}`;
+  sel=null;
+  card=null;
+  blkMode=false;
+  cancelBlk.style.display='none';
+  modeInd.style.display='none';
+  updCard();
+  drawBoard();
+  updUI();
+  for(let p=1;p<=2;p++){
+    if(!units[p].some(u=>u.a)){
+      go=true;
+      let winner = p===1 ? kn2 : kn1;
+      addWinHistory(winner);
+      setTimeout(()=>{ alert(winner+" MENANG!"); },100);
+      return;
+    }
+  }
+}
+
+drawBtn.onclick=function(){
+  alert("🎴 Kartu otomatis setelah bergerak!");
+};
+
+initDeck();
+drawBoard();
+updUI();
+info.innerText="👑 Klik papan";
+
+})();
 </script>
-
 </body>
 </html>
